@@ -1,0 +1,351 @@
+---
+title: Новости культуры
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+  {% include "partials/_header.html" %}
+
+  <section class="slider">
+    <div class="slider__items">
+      <div class="slider__item" style="background-image: url(./img/slider-1.jpg);">
+        <div class="container">
+          <div class="slider__content">
+            <span class="slider__badge">новое</span>
+            <span class="slider__title">Подводный отель</span>
+            <span class="slider__excerpt">Как известно, Дубай – город контрастов. Самые революционные и фантастические мечты архитекторов способен воплотить в жизнь этот мегаполис, построенный на нефти и за счет нефти</span>
+          </div>
+        </div>
+      </div>
+      <div class="slider__item" style="background-image: url(./img/slider-1.jpg);">
+        <div class="container">
+          <div class="slider__content">
+            <span class="slider__badge">новое</span>
+            <span class="slider__title">Подводный отель</span>
+            <span class="slider__excerpt">Как известно, Дубай – город контрастов. Самые революционные и фантастические мечты архитекторов способен воплотить в жизнь этот мегаполис, построенный на нефти и за счет нефти</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slider__controls">
+      <button class="slider__control slider__control--prev">Предыдущая</button>
+      <button class="slider__control slider__control--next">Следущая</button>
+    </div>
+  </section>
+
+  <main class="main">
+    <div class="container">
+
+      <div class="main__wrap">
+
+        <div class="main__content">
+
+          <section class="section">
+            <h2 class="section__title">Новости</h2>
+            <section class="last-news">
+              <div class="last-news__wrap">
+                <article class="last-news__new last-news__article">
+                  <a href="#" class="last-news__image last-news__link">
+                    <img src="./img/article-1.jpg" alt="Новости культуры России и всего мира">
+                  </a>
+                  <div class="last-news__contetn">
+                    <a href="#" class="last-news__link">
+                      <h3 class="last-news__title">Новости культуры России и всего мира</h3>
+                    </a>
+                    <p class="last-news__excerpt">В минувшие выходные в Москве на фестивале «Оберег» вручили первую премию Russian World Music Awards</p>
+                  </div>
+                </article>
+                <div class="last-news__items">
+                  <article class="last-news__item last-news__article last-news__article--small">
+                    <a href="#" class="last-news__image last-news__link">
+                      <img src="./img/article-2.jpg" alt="Открытие нового памятника Евгению Леонову">
+                    </a>
+                    <div class="last-news__contetn">
+                      <a href="#" class="last-news__link">
+                        <h3 class="last-news__title last-news__title--small">Открытие нового памятника Евгению Леонову</h3>
+                      </a>
+                      <p class="last-news__excerpt last-news__excerpt--small">10 сентября в 15:00 был открыт памятник писателю</p>
+                    </div>
+                  </article>
+                  <article class="last-news__item last-news__article last-news__article--small">
+                    <a href="#" class="last-news__image last-news__link">
+                      <img src="./img/article-3.jpg" alt="Беседы с писателями">
+                    </a>
+                    <div class="last-news__contetn">
+                      <a href="#" class="last-news__link">
+                        <h3 class="last-news__title last-news__title--small">Беседы с писателями</h3>
+                      </a>
+                      <p class="last-news__excerpt last-news__excerpt--small">Русские писатели говорят о важности искусства</p>
+                    </div>
+                  </article>
+                  <article class="last-news__item last-news__article last-news__article--small">
+                    <a href="#" class="last-news__image last-news__link">
+                      <img src="./img/article-4.jpg" alt="День и ночь св. Патрика: встреча старых друзей">
+                    </a>
+                    <div class="last-news__contetn">
+                      <a href="#" class="last-news__link">
+                        <h3 class="last-news__title last-news__title--small">День и ночь св. Патрика: встреча старых друзей</h3>
+                      </a>
+                      <p class="last-news__excerpt last-news__excerpt--small">Не Джойсом единым живет Ирландия!</p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </section>
+          </section>
+
+          <section class="section">
+            <h2 class="section__title">Обзоры</h2>
+            <section class="reviews">
+
+              <article class="review">
+                <header class="review__header">
+                  <a href="#" class="review__image">
+                    <img src="./img/review-1.jpg" alt="«Шальные годы» Монпарнаса">
+                  </a>
+                  <div class="review__controls">
+                    <a href="#" class="review__control review__control--views">
+                      <span class="review__control-icon"></span>
+                      <span class="review__control-text visually-hidden">Кол-во просмотров</span>
+                      <span class="review__control-text"></span>
+                    </a>
+                    <a href="#" class="review__control review__control--review">
+                      <span class="review__control-icon"></span>
+                      <span class="review__control-text visually-hidden">Кол-во комментариев</span>
+                      <span class="review__control-text"></span>
+                    </a>
+                    <a href="#" class="review__control review__control--bookmark">
+                      <span class="review__control-icon"></span>
+                      <span class="review__control-text visually-hidden">Добавить в закладки</span>
+                    </a>
+                  </div>
+                </header>
+                <footer class="review__contenе">
+                  <a class="review__link"href="#">
+                    <h3 class="review__title">«Шальные годы» Монпарнаса</h3>
+                  </a>
+                  <p class="review__excerpt">В Музее изобразительных искусств имени Пушкина с 29 сентября по 29 ноября проходит выставка «Шальные годы Монпарнаса»</p>
+                </footer>
+              </article>
+
+              <article class="review">
+                <header class="review__header">
+                  <a href="#" class="review__image">
+                    <img src="./img/review-2.jpg" alt="Анатомия за 30 секунд">
+                  </a>
+                  <div class="review__controls">
+                    <a href="#" class="review__control review__control--views">
+                      <span class="review__control-icon"></span>
+                      <span class="review__control-text visually-hidden">Кол-во просмотров</span>
+                      <span class="review__control-text"></span>
+                    </a>
+                    <a href="#" class="review__control review__control--review">
+                      <span class="review__control-icon"></span>
+                      <span class="review__control-text visually-hidden">Кол-во комментариев</span>
+                      <span class="review__control-text"></span>
+                    </a>
+                    <a href="#" class="review__control review__control--bookmark">
+                      <span class="review__control-icon"></span>
+                      <span class="review__control-text visually-hidden">Добавить в закладки</span>
+                    </a>
+                  </div>
+                </header>
+                <footer class="review__contenе">
+                  <a class="review__link"href="#">
+                    <h3 class="review__title">Анатомия за 30 секунд</h3>
+                  </a>
+                  <p class="review__excerpt">Сейчас, когда мир открыт нараспашку для человека и его познавательных изысканий, интерес к научно-популярной литературе заметно вырос</p>
+                </footer>
+              </article>
+
+              <article class="review">
+                <header class="review__header">
+                  <a href="#" class="review__image">
+                    <img src="./img/review-3.jpg" alt="Русские балетные сезоны ">
+                  </a>
+                  <div class="review__controls">
+                    <a href="#" class="review__control review__control--views">
+                      <span class="review__control-icon"></span>
+                      <span class="review__control-text visually-hidden">Кол-во просмотров</span>
+                      <span class="review__control-text"></span>
+                    </a>
+                    <a href="#" class="review__control review__control--review">
+                      <span class="review__control-icon"></span>
+                      <span class="review__control-text visually-hidden">Кол-во комментариев</span>
+                      <span class="review__control-text"></span>
+                    </a>
+                    <a href="#" class="review__control review__control--bookmark">
+                      <span class="review__control-icon"></span>
+                      <span class="review__control-text visually-hidden">Добавить в закладки</span>
+                    </a>
+                  </div>
+                </header>
+                <footer class="review__contenе">
+                  <a class="review__link"href="#">
+                    <h3 class="review__title">Русские балетные сезоны </h3>
+                  </a>
+                  <p class="review__excerpt">В Новом Иерусалиме стартовал необычный культурно-развлекательный спектакль, который покажут в новом театре</p>
+                </footer>
+              </article>
+
+              <article class="review">
+                <header class="review__header">
+                  <a href="#" class="review__image">
+                    <img src="./img/review-4.jpg" alt="Сферические чудаки">
+                  </a>
+                  <div class="review__controls">
+                    <a href="#" class="review__control review__control--views">
+                      <span class="review__control-icon"></span>
+                      <span class="review__control-text visually-hidden">Кол-во просмотров</span>
+                      <span class="review__control-text"></span>
+                    </a>
+                    <a href="#" class="review__control review__control--review">
+                      <span class="review__control-icon"></span>
+                      <span class="review__control-text visually-hidden">Кол-во комментариев</span>
+                      <span class="review__control-text"></span>
+                    </a>
+                    <a href="#" class="review__control review__control--bookmark">
+                      <span class="review__control-icon"></span>
+                      <span class="review__control-text visually-hidden">Добавить в закладки</span>
+                    </a>
+                  </div>
+                </header>
+                <footer class="review__contenе">
+                  <a class="review__link"href="#">
+                    <h3 class="review__title">Сферические чудаки</h3>
+                  </a>
+                  <p class="review__excerpt">Корреспондентам «Культурного обозревателя» посчастливилось побывать в театре «Сфера» на премьере спектакля «Чудаки и зануды» </p>
+                </footer>
+              </article>
+
+              <footer class="reviews__pagination pagination">
+                <div class="pagination__controls">
+                  <a href="#" class="pagination__control pagination__control--prev">
+                    <span class="visually-hidden">Предыдущая</span>
+                  </a>
+                  <ul class="pagination__items">
+                    <li class="pagination__item">
+                      <a href="#" class="pagination__link pagination__link--active">1</a>
+                      <a href="#" class="pagination__link">2</a>
+                      <a href="#" class="pagination__link">3</a>
+                      <a href="#" class="pagination__link">4</a>
+                      <a href="#" class="pagination__link">5</a>
+                      <a href="#" class="pagination__link">...</a>
+                      <a href="#" class="pagination__link">35</a>
+                    </li>
+                  </ul>
+                  <a href="#" class="pagination__control pagination__control--next">
+                    <span class="visually-hidden">Следущая</span>
+                  </a>
+                </div>
+              </footer>
+
+            </section>
+          </section>
+
+          <article class="random-article">
+            <div class="random-article__content">
+              <a class="random-article__title random-article__link" href="#">Ох, уж этот балет</a>
+              <a class="random-article button button--arrow" href="#">Смотреть</a>
+            </div>
+          </article>
+        </div>
+
+        <aside class="main__sidebar">
+          <ul class="events">
+            <li class="event">
+              <span class="event__box" style="background-image: url(./img/event-1.jpg);">
+                <a href="#" class="event__title">Воздушные шары</a>
+                <a href="#" class="event__button button button--arrow">Смотреть</a>
+              </span>
+            </li>
+            <li class="event">
+              <span class="event__box" style="background-image: url(./img/event-2.jpg);">
+                <a href="#" class="event__title event__title--dark">Необычная фотосессия</a>
+                <a href="#" class="event__button button button--arrow">Смотреть</a>
+              </span>
+            </li>
+            <li class="event">
+              <span class="event__box" style="background-image: url(./img/event-3.jpg);">
+                <a href="#" class="event__title event__title--dark">Выставка птиц</a>
+                <a href="#" class="event__button button button--arrow">Смотреть</a>
+              </span>
+            </li>
+          </ul>
+        </aside>
+
+        <footer class="main__footer">
+          <div class="small-slider">
+            <div class="small-slider__items">
+              <div class="small-slider__item">
+                <div class="small-slider__box" style="background-image: url(./img/footer-slider-1.jpg);">
+                  <div class="small-slider__content">
+                    <a href="#" class="small-slider__title">Как все успевать</a>
+                    <a href="#" class="small-slider__button button button--mono">смотреть</a>
+                  </div>
+                </div>
+              </div>
+              <div class="small-slider__item">
+                <div class="small-slider__box" style="background-image: url(./img/footer-slider-2.jpg);">
+                  <div class="small-slider__content">
+                    <a href="#" class="small-slider__title">Как все успевать</a>
+                    <a href="#" class="small-slider__button button button--mono">смотреть</a>
+                  </div>
+                </div>
+              </div>
+              <div class="small-slider__item">
+                <div class="small-slider__box" style="background-image: url(./img/footer-slider-3.jpg);">
+                  <div class="small-slider__content">
+                    <a href="#" class="small-slider__title">Как все успевать</a>
+                    <a href="#" class="small-slider__button button button--mono">смотреть</a>
+                  </div>
+                </div>
+              </div>
+              <div class="small-slider__item">
+                <div class="small-slider__box" style="background-image: url(./img/footer-slider-4.jpg);">
+                  <div class="small-slider__content">
+                    <a href="#" class="small-slider__title">Как все успевать</a>
+                    <a href="#" class="small-slider__button button button--mono">смотреть</a>
+                  </div>
+                </div>
+              </div>
+              <div class="small-slider__item">
+                <div class="small-slider__box" style="background-image: url(./img/footer-slider-4.jpg);">
+                  <div class="small-slider__content">
+                    <a href="#" class="small-slider__title">Как все успевать</a>
+                    <a href="#" class="small-slider__button button button--mono">смотреть</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="small-slider__controls">
+              <button class="small-slider__control small-slider__control--prev">
+                <span class="visually-hidden">Предыдущая</span>
+              </button>
+              <button class="small-slider__control small-slider__control--next">
+                <span class="visually-hidden">Следущая</span>
+              </button>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+  </main>
+
+  {% include "partials/_footer.html" %}
+
+	<!-- {# mixin example #}
+	{{mixins.icon('facebook')}}
+
+
+	{# data usage example #}
+		{% import "data/data.html" as tests %}
+
+		{% for test in tests.list %}
+		<li>{{test.title}}</li>
+		{% endfor %}
+	{# end of example #} -->
+
+{% endblock %}

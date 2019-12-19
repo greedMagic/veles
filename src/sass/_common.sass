@@ -1,0 +1,437 @@
+body
+	position: relative
+	display: flex
+	height: 100%
+	font-size: 14px
+	line-height: 1.5
+	+base
+
+
+.wrapper
+	position: relative
+	width: 100%
+	display: flex
+	flex-direction: column
+	min-height: 100%
+	height: auto !important
+	overflow-x: hidden
+
+
+.visually-hidden
+	position: absolute
+	width: 1px
+	height: 1px
+	padding: 0
+	border: 0
+	clip: rect(1px, 1px, 1px, 1px)
+	overflow: hidden
+
+
+.container
+	max-width: 1200px
+	margin: 0 auto
+	padding-right: 15px
+	padding-left: 15px
+
+
+.logo
+	+title
+	line-height: 1.5
+	letter-spacing: 1px
+
+
+.button
+	display: inline-flex
+	justify-content: center
+	align-items: center
+	padding: 12px 15px
+	+base
+	font-weight: 600
+	font-size: 12px
+	line-height: 1.5
+	text-decoration: none
+	text-transform: uppercase
+	letter-spacing: 2px
+	color: #ffffff
+	background-color: rgba(0, 0, 0, 0.7)
+	border: 2px solid $color-emphasis
+	&:hover,
+	&:active
+		background-color: $color-emphasis
+	&--arrow::after
+		display: block
+		width: 25px
+		height: 25px
+		content: ""
+		background-image: url("../img/arrow.svg")
+		background-repeat: no-repeat
+		background-size: 24px 25px
+		background-position: center
+
+	&--mono
+		background: rgba(0, 0, 0, 0.3)
+		border: 1px solid #FFFFFF
+
+
+
+.main-menu
+	position: relative;
+
+.main-menu__controls
+	display: none
+
+.main-menu__list
+	+row
+	list-style: none
+
+.main-menu__item
+	margin-right: auto
+	margin-left: auto
+	&:first-of-type
+		margin-left: unset
+	&:last-of-type
+		margin-right: unset
+
+.main-menu__link
+	display: block
+	padding: 10px 15px
+	+base
+	font-size: 15px
+	line-height: 1.2
+	letter-spacing: 2px
+	color: $color-base
+	text-decoration: none
+	text-transform: uppercase
+
+.header
+	position: relative
+
+.header__wrap
+	+row
+
+.header__top,
+.header__nav
+	flex-basis: 100%
+	max-width: 100%
+	padding-right: 15px
+	padding-left: 15px
+
+.header__top
+	padding-top: 65px
+	padding-bottom: 30px
+
+.header__nav
+	padding-top: 15px
+	padding-bottom: 35px
+
+.header__logo
+	font-size: 35px
+	line-height: 1
+	text-align: center
+
+
+.slider
+	position: relative
+	// cursor: url("../img/cursor.svg"), pointer;
+
+.slider__item
+	background-color: #c4c4c4
+	background-position: 50% 0;
+	background-repeat: no-repeat
+
+.slider__controls
+	position: absolute
+	top: 56.5%
+	right: 0
+	left: 0
+	max-width: 970px
+	width: 100%
+	margin: 0 auto
+	display: flex
+	flex-wrap: wrap
+	flex-direction: row
+	justify-content: space-between
+
+.slider__control
+	position: relative
+	display: flex
+	padding: 15px 10px
+	+base
+	font-size: 13px
+	line-height: 1.2
+	color: #ffffff
+	background: unset
+	&::before,
+	&::after
+		display: block
+		margin-top: 8px
+		height: 1px
+		width: 65px
+		background-color: #ffffff
+
+.slider__control--prev:after
+	right: -100%
+	margin-left: 10px
+	content: ""
+
+.slider__control--next:before
+	left: -100%
+	margin-right: 10px
+	content: ""
+
+.slider__content
+	display: block
+	min-height: 465px
+	padding-top: 60px
+	padding-bottom: 30px
+	text-align: center
+
+.slider__badge
+	display: inline-block
+	margin: 0 auto 35px
+	padding: 5px 15px
+	+base
+	font-size: 16px
+	line-height: 1.2
+	text-transform: uppercase
+	letter-spacing: 2px;
+	color: #ffffff
+	background-color: $color-emphasis
+
+.slider__title
+	display: block
+	margin-bottom: 115px
+	+base
+	font-weight: 300
+	font-size: 72px
+	letter-spacing: 2px
+	text-transform: uppercase
+	color: #ffffff
+
+.slider__excerpt
+	display: block
+	max-width: 480px
+	margin: 0 auto
+	padding: 10px 15px
+	+base
+	font-size: 14px
+	line-height: 1.5
+	color: #ffffff
+
+
+.main
+	position: relative
+
+.main__wrap
+	+row
+	padding-top: 95px
+
+.main__content,
+.main__sidebar,
+.main__small-slider
+	padding-right: 15px
+	padding-left: 15px
+
+.main__content
+	flex-basis: 66.66666667%
+	max-width: 66.66666667%
+
+.main__sidebar
+	flex-basis: 33.33333333%
+	max-width: 33.33333333%
+
+.main__footer
+	flex-basis: 100%
+	max-width: 100%
+	padding-top: 80px
+	padding-bottom: 90px
+
+
+.last-news
+	position: relative
+
+.last-news__wrap
+	+row
+
+.last-news__new
+	flex-basis: 62.5%
+	max-width: 62.5%
+	padding-right: 15px
+	padding-left: 15px
+
+.last-news__items
+	flex-basis: 37.5%
+	max-width: 62.5%
+	padding-right: 15px
+	padding-left: 15px
+
+.last-news__item
+	flex-basis: 100%
+	max-width: 100%
+
+.last-news__article
+	position: relative
+
+.last-news__article--small
+	display: flex
+	flex-direction: row
+	flex-wrap: nowrap
+	& > &__image,
+	& > &__contetn
+		flex-basis: 50%
+		max-width: 50%
+
+.last-news__title
+	+title
+	font-size: 20px
+	line-height: 1.35
+
+.last-news__title--small
+	font-size: 14px
+
+.last-news__excerpt
+	+base
+	font-size: 14px
+	line-height: 1.5
+
+.last-news__excerpt--small
+	font-size: 10px
+
+
+.events
+	+row
+
+.event
+	flex-basis: 100%
+	max-width: 100%
+	margin-bottom: 5%
+	padding-right: 15px
+	padding-left: 15px
+	&:last-of-type
+		margin-bottom: unset
+
+.event__box
+	position: relative
+	display: block
+	height: 480px
+	padding: 50px 10%
+	text-align: center
+	background-size: cover
+	background-repeat: no-repeat
+
+.event__title
+	+title
+	font-size: 30px
+	line-height: 1.3
+	text-align: center
+	text-decoration: none
+	text-transform: uppercase
+	letter-spacing: 2px
+	color: #1a1c1c
+	&::before
+		position: absolute
+		top: 0
+		right: 0
+		left: 0
+		bottom: 0
+		content: ""
+	&--dark
+		color: #ffffff
+
+.event__button
+	position: absolute
+	right: 0
+	left: 0
+	z-index: 20
+	bottom: 28px
+	margin: 0 auto
+	max-width: 170px
+
+
+.small-slider
+	position: relative
+
+.small-slider__item
+	padding-right: 15px
+	padding-left: 15px
+
+.small-slider__content
+	display: none
+
+.small-slider__box
+	position: relative
+	display: flex
+	justify-content: center
+	align-items: center
+	height: 135px
+	padding: 25px 15px 15px
+	text-align: center
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+	&::before,
+	&::after
+		position: absolute
+		right: 0
+		left: 0
+		display: block
+		height: 13px
+		content: ""
+		background-color: #ffffff
+	&::before
+		top: 0
+	&::after
+		bottom: 0
+	&:hover::before,
+	&:hover::after
+		height: 0
+	&:hover .small-slider__content
+		display: block
+
+.small-slider__control
+	position: absolute
+	top: 50%
+	z-index: 10
+	transform: translateY(-60%)
+	display: flex
+	height: 44px
+	width: 44px
+	background: #ffffff
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15)
+	&--prev
+		left: -7px
+	&--next
+		right: -7px
+
+.small-slider__title
+	display: block
+	margin-bottom: 10px
+	+base
+	font-weight: 600
+	font-size: 16px
+	line-height: 1.5
+	text-decoration: none
+	text-transform: uppercase
+	letter-spacing: 2px
+	color: #ffffff
+
+.small-slider__button
+	padding: 5px 15px
+	font-size: 12px
+	line-height: 1.5
+	letter-spacing: 2px
+
+.footer
+	background-color: #f7f7f7
+
+.footer__bottom
+	border-top: 1px solid rgba(0, 0, 0, 0.05)
+
+.footer__logo
+	font-size: 28px
+
+.footer__copyright
+	font-size: 10px
+	line-height: 1.5
+	color: #000000
+	opacity: 0.2
