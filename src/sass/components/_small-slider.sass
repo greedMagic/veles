@@ -1,0 +1,130 @@
+.small-slider
+	position: relative
+
+.small-slider__item
+	padding-right: 15px
+	padding-left: 15px
+
+.small-slider__content
+	display: block
+	width: 100%
+	min-height: 135px
+	height: 100%
+	padding: 40px 15px 20px
+	background-color: transparent
+	transition: background-color .2s ease
+	@media (max-width: 1199.98px)
+		padding: 35px 15px 25px
+		min-height: 145px
+		background-color: rgba(0,0,0, .45)
+
+.small-slider__box
+	position: relative
+	min-height: 135px
+	text-align: center
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+	&::before,
+	&::after
+		position: absolute
+		right: 0
+		left: 0
+		z-index: 40
+		display: block
+		height: 13px
+		content: ""
+		background-color: #ffffff
+		transition: all .25s ease
+	&::before
+		top: 0
+	&::after
+		bottom: 0
+	&:hover::before,
+	&:hover::after
+		height: 0
+	&:hover .small-slider__content
+		background-color: rgba(0,0,0, .45)
+	@media (max-width: 1199.98px)
+		min-height: 145px
+		&::before,
+		&::after
+			content: unset
+
+.small-slider__control
+	position: absolute
+	top: 50%
+	z-index: 10
+	transform: translateY(-60%)
+	display: flex
+	height: 44px
+	width: 44px
+	background-color: rgba(255, 255, 255, 0.85)
+	background-image: url(../img/rhombus.svg)
+	background-repeat: no-repeat
+	background-position: center
+	background-size: 9px
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15)
+	transition: all 0.15s ease
+	&:focus,
+	&:hover
+		background-color: #ffffff
+	&:active
+		background-color: darken(#ffffff, 1%)
+		box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1)
+	@media (max-width: 575.98px)
+		display: none
+
+.small-slider__control--prev
+	left: -7px
+.small-slider__control--next
+	right: -7px
+	transform: translateY(-60%) rotate(180deg)
+
+.small-slider__title
+	z-index: 15
+	display: block
+	margin-bottom: 10px
+	+base
+	font-weight: 600
+	font-size: 16px
+	line-height: 1.7
+	text-decoration: none
+	text-transform: uppercase
+	letter-spacing: 2px
+	text-overflow: ellipsis
+	white-space: nowrap
+	overflow: hidden
+	color: #ffffff
+	@media (min-width: 1200px)
+		opacity: 0
+		transition: opacity 0.15s ease
+
+.small-slider__title::before
+	position: absolute
+	top: 0
+	right: 0
+	left: 0
+	bottom: 0
+	content: ""
+
+.small-slider__button
+	position: relative
+	z-index: 15
+	padding: 5px 15px
+	font-size: 12px
+	line-height: 1.5
+	letter-spacing: 2px
+	@media (min-width: 1200px)
+		opacity: 0
+
+.small-slider__content:hover .small-slider__title,
+.small-slider__content:hover .small-slider__button
+	opacity: 1
+
+.small-slider__content:hover .small-slider__button
+	transition: opacity 0.3s ease
+	transition-delay: 0.15s
+
+.small-slider .slick-dots
+	bottom: -30px

@@ -1,0 +1,74 @@
+.random-article
+	position: relative
+
+.random-article__box
+	position: relative
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+	align-items: center
+	width: 100%
+	height: 140px
+	padding: 20px
+	background-repeat: no-repeat
+	background-size: cover
+	&::before
+		position: absolute
+		top: 0
+		right: 0
+		left: 0
+		bottom: 0
+		content: ""
+		background-color: transparent
+		box-shadow: 0 0 0 2px transparent inset
+		transition: box-shadow .15s ease, background-color .2s ease
+	+xs
+		padding: 45px 15px 25px
+		height: unset
+
+.random-article__inner
+	z-index: 20
+	display: flex
+	flex-wrap: nowrap
+	justify-content: flex-start
+	align-items: center
+	text-align: center
+	@media screen and ( max-width: 576px)
+		flex-wrap: wrap
+		justify-content: center
+
+.random-article__title
+	display: block
+	max-width: 400px
+	margin-right: 45px
+	+base
+	font-weight: 500
+	font-size: 30px
+	line-height: 1.25
+	text-decoration: none
+	text-transform: uppercase
+	letter-spacing: 2px
+	white-space: nowrap
+	overflow: hidden
+	text-overflow: ellipsis
+	color: #ffffff
+	&::before
+		position: absolute
+		top: 0
+		right: 0
+		left: 0
+		bottom: 0
+		content: ""
+	@media screen and  ( max-width: 500px)
+		margin: 0 auto 20px
+		width: 100%
+	@media screen and ( max-width: 992px)
+		font-size: 20px
+
+.random-article:focus-within .random-article__box:before,
+.random-article:hover .random-article__box:before
+	background-color: rgba(0,0,0,.25)
+	box-shadow: 0 0 0 2px $color-emphasis inset
+
+.random-article__butoon
+	max-width: 170px
