@@ -72,7 +72,9 @@
     "webpack-cli": "^3.3.0"
   },
   "dependencies": {
+    "mmenu-light": "^3.0.0",
     "slick-carousel": "^1.8.1",
+    "sticky-header": "^0.3.0",
     "stylelint-selector-bem-pattern": "^2.1.0"
   }
 }
