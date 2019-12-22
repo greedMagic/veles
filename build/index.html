@@ -10,6 +10,7 @@
     <link rel="stylesheet" media="all" href="css/app.css" />
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:900&display=swap&subset=cyrillic" rel="stylesheet">
     <!--  -->
+    <meta name="msapplication-tap-highlight" content="no">
   </head>
   <body id="page">
     <!-- BEGIN content -->
@@ -22,33 +23,33 @@
             </div>
             <div class="header__main-menu main-menu">
               <nav id="main-menu">
-                <ul>
-                  <li>
-                    <a href="#">Новости</a>
+                <ul class="main-menu__list">
+                  <li class="main-menu__item">
+                    <a class="main-menu__link is-current" href="#">Новости</a>
                   </li>
-                  <li>
-                    <a href="#">Обзоры</a>
+                  <li class="main-menu__item">
+                    <a class="main-menu__link" href="#">Обзоры</a>
                   </li>
-                  <li>
-                    <a href="#">Музыка</a>
+                  <li class="main-menu__item">
+                    <a class="main-menu__link" href="#">Музыка</a>
                   </li>
-                  <li>
-                    <a href="#">Архитектура</a>
+                  <li class="main-menu__item">
+                    <a class="main-menu__link" href="#">Архитектура</a>
                   </li>
-                  <li>
-                    <a href="#">Кино</a>
+                  <li class="main-menu__item">
+                    <a class="main-menu__link" href="#">Кино</a>
                   </li>
-                  <li>
-                    <a href="#">Театр</a>
+                  <li class="main-menu__item">
+                    <a class="main-menu__link" href="#">Театр</a>
                   </li>
-                  <li>
-                    <a href="#">Литература</a>
+                  <li class="main-menu__item">
+                    <a class="main-menu__link" href="#">Литература</a>
                   </li>
-                  <li>
-                    <a href="#">Религия</a>
+                  <li class="main-menu__item">
+                    <a class="main-menu__link" href="#">Религия</a>
                   </li>
-                  <li>
-                    <a href="#">Живопись</a>
+                  <li class="main-menu__item">
+                    <a class="main-menu__link" href="#">Живопись</a>
                   </li>
                 </ul>
                 <button class="main-menu__control main-menu__control--close">
@@ -97,18 +98,28 @@
                 <h2 class="section__title">Новости</h2>
                 <div class="last-news">
                   <div class="last-news__wrap">
-                    <article class="last-news__new">
-                      <div class="last-news__new-box" style="background-image: url(./img/article-1.jpg);">
-                        <div class="last-news__new-content">
-                          <a class="last-news__link" href="#">
-                            <h3 class="last-news__title">Новости культуры России и всего мира</h3>
-                          </a>
-                          <p class="last-news__text">В минувшие выходные в Москве на фестивале «Оберег» вручили первую премию Russian World Music Awards</p>
-                        </div>
+                    <article class="last-news__article is-current">
+                      <header class="last-news__header">
+                        <a class="last-news__image" href="#">
+                          <img src="./img/article-1.jpg" alt="Новости культуры России и всего мира">
+                        </a>
+                        <a class="last-news__bookmark" href="#">
+                          <span class="last-news__bookmark-icon">
+                            <svg viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M1 1h12v15l-6-4.865L1 16V1z" stroke="currentColor" stroke-width="1.5" /></svg>
+                          </span>
+                          <span class="visually-hidden">Добавить в закладки</span>
+                        </a>
+                      </header>
+                      <div class="last-news__content">
+                        <a class="last-news__link" href="#">
+                          <h3 class="last-news__title">Новости культуры России и всего мира</h3>
+                        </a>
+                        <p class="last-news__text">В минувшие выходные в Москве на фестивале «Оберег» вручили первую премию Russian World Music Awards</p>
                       </div>
                     </article>
                     <div class="last-news__items">
-                      <article class="last-news__item">
+                      <article class="last-news__item last-news__article">
                         <header class="last-news__header">
                           <a class="last-news__image" href="#">
                             <img src="./img/article-2.jpg" alt="Открытие нового памятника Евгению Леонову">
@@ -122,15 +133,13 @@
                           </a>
                         </header>
                         <div class="last-news__content">
-                          <div class="last-news__content-inner">
-                            <a class="last-news__link" href="#">
-                              <h3 class="last-news__title">Открытие нового памятника Евгению Леонову</h3>
-                            </a>
-                            <p class="last-news__text">10 сентября в 15:00 был открыт памятник писателю</p>
-                          </div>
+                          <a class="last-news__link" href="#">
+                            <h3 class="last-news__title">Открытие нового памятника Евгению Леонову</h3>
+                          </a>
+                          <p class="last-news__text">10 сентября в 15:00 был открыт памятник писателю</p>
                         </div>
                       </article>
-                      <article class="last-news__item">
+                      <article class="last-news__item last-news__article">
                         <header class="last-news__header">
                           <a class="last-news__image" href="#">
                             <img src="./img/article-3.jpg" alt="Беседы с писателями">
@@ -144,15 +153,13 @@
                           </a>
                         </header>
                         <div class="last-news__content">
-                          <div class="last-news__content-inner">
-                            <a class="last-news__link" href="#">
-                              <h3 class="last-news__title">Беседы с писателями</h3>
-                            </a>
-                            <p class="last-news__text">Русские писатели говорят о важности искусства</p>
-                          </div>
+                          <a class="last-news__link" href="#">
+                            <h3 class="last-news__title">Беседы с писателями</h3>
+                          </a>
+                          <p class="last-news__text">Русские писатели говорят о важности искусства</p>
                         </div>
                       </article>
-                      <article class="last-news__item">
+                      <article class="last-news__item last-news__article">
                         <header class="last-news__header">
                           <a class="last-news__image" href="#">
                             <img src="./img/article-4.jpg" alt="День и ночь св. Патрика: встреча старых друзей">
@@ -166,12 +173,10 @@
                           </a>
                         </header>
                         <div class="last-news__content">
-                          <div class="last-news__content-inner">
-                            <a class="last-news__link" href="#">
-                              <h3 class="last-news__title">День и ночь св. Патрика: встреча старых друзей</h3>
-                            </a>
-                            <p class="last-news__text">Не Джойсом единым живет Ирландия!</p>
-                          </div>
+                          <a class="last-news__link" href="#">
+                            <h3 class="last-news__title">День и ночь св. Патрика: встреча старых друзей</h3>
+                          </a>
+                          <p class="last-news__text">Не Джойсом единым живет Ирландия!</p>
                         </div>
                       </article>
                     </div>
@@ -194,23 +199,23 @@
                         <span class="visually-hidden">Добавить в закладки</span>
                       </a>
                       <div class="review__counts">
-                        <a class="statistic__count" href="#">
-                          <span class="statistic__count-icon">
+                        <a class="review__count" href="#">
+                          <span class="review__count-icon">
                             <svg viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M12 7.462c.32 0 .579-.242.579-.539 0-.297-.26-.538-.579-.538-.32 0-.579.24-.579.538 0 .297.26.539.579.539z" stroke="currentColor" stroke-opacity=".4" stroke-linecap="round" stroke-linejoin="round" />
                               <path d="M12 12.846c2.878 0 5.21-2.17 5.21-4.846S14.878 3.154 12 3.154 6.79 5.324 6.79 8c0 2.677 2.332 4.846 5.21 4.846z" stroke="currentColor" stroke-opacity=".4" stroke-linecap="round" stroke-linejoin="round" />
                               <path d="M1 8s3.929-7 11-7 11 7 11 7-3.929 7-11 7S1 8 1 8z" stroke="currentColor" stroke-opacity=".4" stroke-linecap="round" stroke-linejoin="round" /></svg>
                           </span>
-                          <span class="statistic__count-text visually-hidden">Кол-во просмотров</span>
-                          <span class="statistic__count-text">37</span>
+                          <span class="review__count-text visually-hidden">Кол-во просмотров</span>
+                          <span class="review__count-text">37</span>
                         </a>
-                        <a class="statistic__count" href="#">
-                          <span class="statistic__count-icon">
+                        <a class="review__count" href="#">
+                          <span class="review__count-icon">
                             <svg viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M9 13c4.418 0 8-2.686 8-6s-3.582-6-8-6-8 2.686-8 6c0 2.236 1.631 4.187 4.05 5.219.057 1.388-.483 2.726-1.764 2.726.99.179 3.395.017 5.417-1.95C8.8 13 8.9 13 9 13z" stroke="currentColor" stroke-opacity=".4" /></svg>
                           </span>
-                          <span class="statistic__count-text visually-hidden">Кол-во комментариев</span>
-                          <span class="statistic__count-text">2</span>
+                          <span class="review__count-text visually-hidden">Кол-во комментариев</span>
+                          <span class="review__count-text">2</span>
                         </a>
                       </div>
                     </header>
@@ -234,23 +239,23 @@
                         <span class="visually-hidden">Добавить в закладки</span>
                       </a>
                       <div class="review__counts">
-                        <a class="statistic__count" href="#">
-                          <span class="statistic__count-icon">
+                        <a class="review__count" href="#">
+                          <span class="review__count-icon">
                             <svg viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M12 7.462c.32 0 .579-.242.579-.539 0-.297-.26-.538-.579-.538-.32 0-.579.24-.579.538 0 .297.26.539.579.539z" stroke="currentColor" stroke-opacity=".4" stroke-linecap="round" stroke-linejoin="round" />
                               <path d="M12 12.846c2.878 0 5.21-2.17 5.21-4.846S14.878 3.154 12 3.154 6.79 5.324 6.79 8c0 2.677 2.332 4.846 5.21 4.846z" stroke="currentColor" stroke-opacity=".4" stroke-linecap="round" stroke-linejoin="round" />
                               <path d="M1 8s3.929-7 11-7 11 7 11 7-3.929 7-11 7S1 8 1 8z" stroke="currentColor" stroke-opacity=".4" stroke-linecap="round" stroke-linejoin="round" /></svg>
                           </span>
-                          <span class="statistic__count-text visually-hidden">Кол-во просмотров</span>
-                          <span class="statistic__count-text">37</span>
+                          <span class="review__count-text visually-hidden">Кол-во просмотров</span>
+                          <span class="review__count-text">37</span>
                         </a>
-                        <a class="statistic__count" href="#">
-                          <span class="statistic__count-icon">
+                        <a class="review__count" href="#">
+                          <span class="review__count-icon">
                             <svg viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M9 13c4.418 0 8-2.686 8-6s-3.582-6-8-6-8 2.686-8 6c0 2.236 1.631 4.187 4.05 5.219.057 1.388-.483 2.726-1.764 2.726.99.179 3.395.017 5.417-1.95C8.8 13 8.9 13 9 13z" stroke="currentColor" stroke-opacity=".4" /></svg>
                           </span>
-                          <span class="statistic__count-text visually-hidden">Кол-во комментариев</span>
-                          <span class="statistic__count-text">2</span>
+                          <span class="review__count-text visually-hidden">Кол-во комментариев</span>
+                          <span class="review__count-text">2</span>
                         </a>
                       </div>
                     </header>
@@ -274,23 +279,23 @@
                         <span class="visually-hidden">Добавить в закладки</span>
                       </a>
                       <div class="review__counts">
-                        <a class="statistic__count" href="#">
-                          <span class="statistic__count-icon">
+                        <a class="review__count" href="#">
+                          <span class="review__count-icon">
                             <svg viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M12 7.462c.32 0 .579-.242.579-.539 0-.297-.26-.538-.579-.538-.32 0-.579.24-.579.538 0 .297.26.539.579.539z" stroke="currentColor" stroke-opacity=".4" stroke-linecap="round" stroke-linejoin="round" />
                               <path d="M12 12.846c2.878 0 5.21-2.17 5.21-4.846S14.878 3.154 12 3.154 6.79 5.324 6.79 8c0 2.677 2.332 4.846 5.21 4.846z" stroke="currentColor" stroke-opacity=".4" stroke-linecap="round" stroke-linejoin="round" />
                               <path d="M1 8s3.929-7 11-7 11 7 11 7-3.929 7-11 7S1 8 1 8z" stroke="currentColor" stroke-opacity=".4" stroke-linecap="round" stroke-linejoin="round" /></svg>
                           </span>
-                          <span class="statistic__count-text visually-hidden">Кол-во просмотров</span>
-                          <span class="statistic__count-text">37</span>
+                          <span class="review__count-text visually-hidden">Кол-во просмотров</span>
+                          <span class="review__count-text">37</span>
                         </a>
-                        <a class="statistic__count" href="#">
-                          <span class="statistic__count-icon">
+                        <a class="review__count" href="#">
+                          <span class="review__count-icon">
                             <svg viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M9 13c4.418 0 8-2.686 8-6s-3.582-6-8-6-8 2.686-8 6c0 2.236 1.631 4.187 4.05 5.219.057 1.388-.483 2.726-1.764 2.726.99.179 3.395.017 5.417-1.95C8.8 13 8.9 13 9 13z" stroke="currentColor" stroke-opacity=".4" /></svg>
                           </span>
-                          <span class="statistic__count-text visually-hidden">Кол-во комментариев</span>
-                          <span class="statistic__count-text">2</span>
+                          <span class="review__count-text visually-hidden">Кол-во комментариев</span>
+                          <span class="review__count-text">2</span>
                         </a>
                       </div>
                     </header>
@@ -314,23 +319,23 @@
                         <span class="visually-hidden">Добавить в закладки</span>
                       </a>
                       <div class="review__counts">
-                        <a class="statistic__count" href="#">
-                          <span class="statistic__count-icon">
+                        <a class="review__count" href="#">
+                          <span class="review__count-icon">
                             <svg viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M12 7.462c.32 0 .579-.242.579-.539 0-.297-.26-.538-.579-.538-.32 0-.579.24-.579.538 0 .297.26.539.579.539z" stroke="currentColor" stroke-opacity=".4" stroke-linecap="round" stroke-linejoin="round" />
                               <path d="M12 12.846c2.878 0 5.21-2.17 5.21-4.846S14.878 3.154 12 3.154 6.79 5.324 6.79 8c0 2.677 2.332 4.846 5.21 4.846z" stroke="currentColor" stroke-opacity=".4" stroke-linecap="round" stroke-linejoin="round" />
                               <path d="M1 8s3.929-7 11-7 11 7 11 7-3.929 7-11 7S1 8 1 8z" stroke="currentColor" stroke-opacity=".4" stroke-linecap="round" stroke-linejoin="round" /></svg>
                           </span>
-                          <span class="statistic__count-text visually-hidden">Кол-во просмотров</span>
-                          <span class="statistic__count-text">37</span>
+                          <span class="review__count-text visually-hidden">Кол-во просмотров</span>
+                          <span class="review__count-text">37</span>
                         </a>
-                        <a class="statistic__count" href="#">
-                          <span class="statistic__count-icon">
+                        <a class="review__count" href="#">
+                          <span class="review__count-icon">
                             <svg viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M9 13c4.418 0 8-2.686 8-6s-3.582-6-8-6-8 2.686-8 6c0 2.236 1.631 4.187 4.05 5.219.057 1.388-.483 2.726-1.764 2.726.99.179 3.395.017 5.417-1.95C8.8 13 8.9 13 9 13z" stroke="currentColor" stroke-opacity=".4" /></svg>
                           </span>
-                          <span class="statistic__count-text visually-hidden">Кол-во комментариев</span>
-                          <span class="statistic__count-text">2</span>
+                          <span class="review__count-text visually-hidden">Кол-во комментариев</span>
+                          <span class="review__count-text">2</span>
                         </a>
                       </div>
                     </header>
@@ -468,33 +473,33 @@
             <p class="footer__logo logo">Новости культуры</p>
           </div>
           <div class="footer__main-menu main-menu">
-            <ul>
-              <li>
-                <a href="#">Новости</a>
+            <ul class="main-menu__list">
+              <li class="main-menu__item">
+                <a class="main-menu__link is-current" href="#">Новости</a>
               </li>
-              <li>
-                <a href="#">Обзоры</a>
+              <li class="main-menu__item">
+                <a class="main-menu__link" href="#">Обзоры</a>
               </li>
-              <li>
-                <a href="#">Музыка</a>
+              <li class="main-menu__item">
+                <a class="main-menu__link" href="#">Музыка</a>
               </li>
-              <li>
-                <a href="#">Архитектура</a>
+              <li class="main-menu__item">
+                <a class="main-menu__link" href="#">Архитектура</a>
               </li>
-              <li>
-                <a href="#">Кино</a>
+              <li class="main-menu__item">
+                <a class="main-menu__link" href="#">Кино</a>
               </li>
-              <li>
-                <a href="#">Театр</a>
+              <li class="main-menu__item">
+                <a class="main-menu__link" href="#">Театр</a>
               </li>
-              <li>
-                <a href="#">Литература</a>
+              <li class="main-menu__item">
+                <a class="main-menu__link" href="#">Литература</a>
               </li>
-              <li>
-                <a href="#">Религия</a>
+              <li class="main-menu__item">
+                <a class="main-menu__link" href="#">Религия</a>
               </li>
-              <li>
-                <a href="#">Живопись</a>
+              <li class="main-menu__item">
+                <a class="main-menu__link" href="#">Живопись</a>
               </li>
             </ul>
           </div>
