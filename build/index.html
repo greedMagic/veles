@@ -5,15 +5,50 @@
     <title>Новости культуры</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#fff" />
+    <meta name="theme-color" content="#039be5" />
     <meta name="format-detection" content="telephone=no" />
-    <link rel="stylesheet" media="all" href="css/app.css" />
+    <link rel="stylesheet" href="css/app.css" />
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:900&display=swap&subset=cyrillic" rel="stylesheet">
-    <!--  -->
+    <link rel="shortcut icon" href="img/icons/icon-72x72.png" type="image/png">
     <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="Тестовая верстка" />
+    <link rel="manifest" href="manifest.json">
+    <style>
+      @font-face {
+        font-family: 'Raleway';
+        src: local("Raleway Light"), local("Raleway-Light"), url("fonts/ralewaylight.woff2") format("woff2"), url("fonts/ralewaylight.woff") format("woff");
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Raleway';
+        src: local("Raleway Regular"), local("Raleway-Regular"), url("fonts/ralewayregular.woff2") format("woff2"), url("fonts/ralewayregular.woff") format("woff");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Raleway';
+        src: local("Raleway Medium"), local("Raleway-Medium"), url("fonts/ralewaymedium.woff2") format("woff2"), url("fonts/ralewaymedium.woff") format("woff");
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Raleway';
+        src: local("Raleway SemiBold"), local("Raleway-SemiBold"), url("fonts/ralewaysemibold.woff2") format("woff2"), url("fonts/ralewaysemibold.woff") format("woff");
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+      }
+
+    </style>
   </head>
-  <body id="page">
-    <!-- BEGIN content -->
+  <body>
     <div class="wrapper">
       <header class="header">
         <div class="container">
@@ -22,452 +57,556 @@
               <h1 class="header__logo logo">Новости культуры</h1>
             </div>
             <div class="header__main-menu main-menu">
-              <nav id="main-menu">
-                <ul class="main-menu__list">
-                  <li class="main-menu__item">
-                    <a class="main-menu__link is-current" href="#">Новости</a>
-                  </li>
-                  <li class="main-menu__item">
-                    <a class="main-menu__link" href="#">Обзоры</a>
-                  </li>
-                  <li class="main-menu__item">
-                    <a class="main-menu__link" href="#">Музыка</a>
-                  </li>
-                  <li class="main-menu__item">
-                    <a class="main-menu__link" href="#">Архитектура</a>
-                  </li>
-                  <li class="main-menu__item">
-                    <a class="main-menu__link" href="#">Кино</a>
-                  </li>
-                  <li class="main-menu__item">
-                    <a class="main-menu__link" href="#">Театр</a>
-                  </li>
-                  <li class="main-menu__item">
-                    <a class="main-menu__link" href="#">Литература</a>
-                  </li>
-                  <li class="main-menu__item">
-                    <a class="main-menu__link" href="#">Религия</a>
-                  </li>
-                  <li class="main-menu__item">
-                    <a class="main-menu__link" href="#">Живопись</a>
-                  </li>
-                </ul>
-                <button class="main-menu__control main-menu__control--close">
-                  <span class="main-menu__control-text visually-hidden">Закрыть меню</span>
-                </button>
-              </nav>
-              <button class="main-menu__control main-menu__control--open">
-                <span class="main-menu__control-icon"></span>
-                <span class="main-menu__control-text visually-hidden">Открыть меню</span>
+              <button class="main-menu__button main-menu__button--color-orange js-menu-button">
+                <span class="main-menu__icon-box">
+                  <span class="main-menu__icon main-menu__icon--color-white"></span>
+                </span>
+                <span class="main-menu__text">Показать/скрыть меню</span>
               </button>
+              <div class="main-menu__side-panel">
+                <div class="main-menu__side-panel-control">
+                  <button class="main-menu__button js-menu-button">
+                    <span class="main-menu__icon-box main-menu__icon-box--big">
+                      <span class="main-menu__icon main-menu__icon--color-gray"></span>
+                    </span>
+                    <span class="main-menu__text">open/hide menu</span>
+                  </button>
+                </div>
+                <nav class="main-menu__side-panel-content">
+                  <ul class="main-menu__list">
+                    <li class="main-menu__item">
+                      <a class="main-menu__link is-current" href="#">Новости</a>
+                    </li>
+                    <li class="main-menu__item">
+                      <a class="main-menu__link" href="#">Обзоры</a>
+                    </li>
+                    <li class="main-menu__item">
+                      <a class="main-menu__link" href="#">Музыка</a>
+                    </li>
+                    <li class="main-menu__item">
+                      <a class="main-menu__link" href="#">Архитектура</a>
+                    </li>
+                    <li class="main-menu__item">
+                      <a class="main-menu__link" href="#">Кино</a>
+                    </li>
+                    <li class="main-menu__item">
+                      <a class="main-menu__link" href="#">Театр</a>
+                    </li>
+                    <li class="main-menu__item">
+                      <a class="main-menu__link" href="#">Литература</a>
+                    </li>
+                    <li class="main-menu__item">
+                      <a class="main-menu__link" href="#">Религия</a>
+                    </li>
+                    <li class="main-menu__item">
+                      <a class="main-menu__link" href="#">Живопись</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
             </div>
           </div>
         </div>
       </header>
-      <div class="slider">
-        <div class="slider__items">
-          <div class="slider__item">
-            <div class="slider__content slider__image" style="background-image: url(./img/slider-1.jpg);">
-              <div class="slider__wrap">
-                <span class="slider__badge">новое</span>
-                <span class="slider__title">Подводный отель</span>
-                <span class="slider__excerpt">Как известно, Дубай – город контрастов. Самые революционные и фантастические мечты архитекторов способен воплотить в жизнь этот мегаполис, построенный на нефти и за счет нефти</span>
+      <div class="welcome welcome--hide">
+        <div class="welcome__items">
+          <div class="welcome__item">
+            <div class="welcome__item-inner">
+              <figure class="welcome__image">
+                <picture>
+                  <source type="image/webp" srcset="img/slider-1.webp">
+                  <source type="image/jpeg" srcset="img/slider-1.jpg">
+                  <img src="img/slider-1.jpg" alt="">
+                </picture>
+              </figure>
+              <div class="welcome__content">
+                <span class="welcome__badge">новое</span>
+                <span class="welcome__title">Подводный отель</span>
+                <span class="welcome__text">Как известно, Дубай – город контрастов. Самые революционные и фантастические мечты архитекторов способен воплотить в жизнь этот мегаполис, построенный на нефти и за счет нефти</span>
               </div>
             </div>
           </div>
-          <div class="slider__item">
-            <div class="slider__content slider__image" style="background-image: url(./img/slider-2.jpg);">
-              <div class="slider__wrap">
-                <span class="slider__badge">новое</span>
-                <span class="slider__title">Подводный отель</span>
-                <span class="slider__excerpt">Как известно, Дубай – город контрастов. Самые революционные и фантастические мечты архитекторов способен воплотить в жизнь этот мегаполис, построенный на нефти и за счет нефти</span>
+          <div class="welcome__item">
+            <div class="welcome__item-inner">
+              <figure class="welcome__image">
+                <picture>
+                  <source type="image/webp" srcset="img/slider-2.webp">
+                  <source type="image/jpeg" srcset="img/slider-2.jpg">
+                  <img src="img/slider-2.jpg" alt="">
+                </picture>
+              </figure>
+              <div class="welcome__content">
+                <span class="welcome__badge">новое</span>
+                <span class="welcome__title">Подводный отель</span>
+                <span class="welcome__text">Как известно, Дубай – город контрастов. Самые революционные и фантастические мечты архитекторов способен воплотить в жизнь этот мегаполис, построенный на нефти и за счет нефти</span>
               </div>
             </div>
           </div>
         </div>
-        <div class="slider__controls">
-          <button class="slider__control slider__control--prev">Предыдущая</button>
-          <button class="slider__control slider__control--next">Следущая</button>
+        <div class="welcome__controls">
+          <button class="welcome__control welcome__control--prev">Предыдущая</button>
+          <button class="welcome__control welcome__control--next">Следущая</button>
         </div>
       </div>
-      <div class="content">
-        <div class="container">
-          <div class="content__wrap">
-            <main class="content__main">
-              <section class="section">
-                <h2 class="section__title">Новости</h2>
-                <div class="last-news">
-                  <div class="last-news__wrap">
-                    <article class="last-news__article is-current">
-                      <header class="last-news__header">
-                        <a class="last-news__image" href="#">
-                          <img src="./img/article-1.jpg" alt="Новости культуры России и всего мира">
-                        </a>
-                        <a class="last-news__bookmark" href="#">
-                          <span class="last-news__bookmark-icon">
-                            <svg viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 1h12v15l-6-4.865L1 16V1z" stroke="currentColor" stroke-width="1.5" /></svg>
-                          </span>
-                          <span class="visually-hidden">Добавить в закладки</span>
-                        </a>
-                      </header>
-                      <div class="last-news__content">
-                        <a class="last-news__link" href="#">
-                          <h3 class="last-news__title">Новости культуры России и всего мира</h3>
-                        </a>
-                        <p class="last-news__text">В минувшие выходные в Москве на фестивале «Оберег» вручили первую премию Russian World Music Awards</p>
-                      </div>
-                    </article>
-                    <div class="last-news__items">
-                      <article class="last-news__item last-news__article">
-                        <header class="last-news__header">
-                          <a class="last-news__image" href="#">
-                            <img src="./img/article-2.jpg" alt="Открытие нового памятника Евгению Леонову">
-                          </a>
-                          <a class="last-news__bookmark" href="#">
-                            <span class="last-news__bookmark-icon">
-                              <svg viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 1h12v15l-6-4.865L1 16V1z" stroke="currentColor" stroke-width="1.5" /></svg>
-                            </span>
-                            <span class="visually-hidden">Добавить в закладки</span>
-                          </a>
-                        </header>
-                        <div class="last-news__content">
-                          <a class="last-news__link" href="#">
-                            <h3 class="last-news__title">Открытие нового памятника Евгению Леонову</h3>
-                          </a>
-                          <p class="last-news__text">10 сентября в 15:00 был открыт памятник писателю</p>
+      <div class="main-page">
+        <div class="main-page__container">
+          <main class="main-page__main">
+            <section class="main-page__section" data-aos="zoom-in-down">
+              <h2 class="main-page__title">Новости</h2>
+              <div class="last-news__container">
+                <div class="last-news__left">
+                  <article class="last-news__item news news--big">
+                    <aside class="news__aside">
+                      <a class="news__link news__band" href="#">
+                        <div class="news__poster">
+                          <picture>
+                            <source type="image/webp" srcset="img/article-1.webp">
+                            <source type="image/jpeg" srcset="img/article-1.jpg">
+                            <img src="img/article-1.jpg" alt="Новости культуры России и всего мира">
+                          </picture>
                         </div>
-                      </article>
-                      <article class="last-news__item last-news__article">
-                        <header class="last-news__header">
-                          <a class="last-news__image" href="#">
-                            <img src="./img/article-3.jpg" alt="Беседы с писателями">
-                          </a>
-                          <a class="last-news__bookmark" href="#">
-                            <span class="last-news__bookmark-icon">
-                              <svg viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 1h12v15l-6-4.865L1 16V1z" stroke="currentColor" stroke-width="1.5" /></svg>
-                            </span>
-                            <span class="visually-hidden">Добавить в закладки</span>
-                          </a>
-                        </header>
-                        <div class="last-news__content">
-                          <a class="last-news__link" href="#">
-                            <h3 class="last-news__title">Беседы с писателями</h3>
-                          </a>
-                          <p class="last-news__text">Русские писатели говорят о важности искусства</p>
+                        <div class="news__band-text">
+                          <h3 class="news__lead">Новости культуры России и всего мира</h3>
+                          <p class="news__text">В минувшие выходные в Москве на фестивале «Оберег» вручили первую премию Russian World Music Awards</p>
                         </div>
-                      </article>
-                      <article class="last-news__item last-news__article">
-                        <header class="last-news__header">
-                          <a class="last-news__image" href="#">
-                            <img src="./img/article-4.jpg" alt="День и ночь св. Патрика: встреча старых друзей">
-                          </a>
-                          <a class="last-news__bookmark" href="#">
-                            <span class="last-news__bookmark-icon">
-                              <svg viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 1h12v15l-6-4.865L1 16V1z" stroke="currentColor" stroke-width="1.5" /></svg>
-                            </span>
-                            <span class="visually-hidden">Добавить в закладки</span>
-                          </a>
-                        </header>
-                        <div class="last-news__content">
-                          <a class="last-news__link" href="#">
-                            <h3 class="last-news__title">День и ночь св. Патрика: встреча старых друзей</h3>
-                          </a>
-                          <p class="last-news__text">Не Джойсом единым живет Ирландия!</p>
-                        </div>
-                      </article>
-                    </div>
-                  </div>
+                      </a>
+                      <a class="news__bookmark sub-link" href="#">
+                        <span class="sub-link__icon-wrap sub-link__icon-wrap--shrink">
+                          <svg class="sub-link__icon sub-link__icon--bookmark" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1h12v15l-6-4.865L1 16V1z" stroke="currentColor" stroke-width="1.5" /></svg>
+                        </span>
+                        <span class="sub-link__text sub-link__text--hide">Добавить статью в закладки?</span>
+                      </a>
+                    </aside>
+                  </article>
                 </div>
-              </section>
-              <section class="section">
-                <h2 class="section__title">Обзоры</h2>
-                <div class="reviews">
-                  <article class="review">
-                    <header class="review__header">
-                      <a class="review__image" href="#">
-                        <img src="./img/review-1.jpg" alt="«Шальные годы» Монпарнаса">
+                <div class="last-news__right last-news__list">
+                  <article class="last-news__item news">
+                    <aside class="news__aside">
+                      <a class="news__poster" href="#">
+                        <picture>
+                          <source type="image/webp" srcset="img/article-2.webp">
+                          <source type="image/jpeg" srcset="img/article-2.jpg">
+                          <img src="img/article-2.jpg" alt="Открытие нового памятника Евгению Леонову">
+                        </picture>
                       </a>
-                      <a class="review__bookmark" href="#">
-                        <span class="review__bookmark-icon">
-                          <svg viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <a class="news__bookmark sub-link" href="#">
+                        <span class="sub-link__icon-wrap sub-link__icon-wrap--shrink">
+                          <svg class="sub-link__icon sub-link__icon--bookmark" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 1h12v15l-6-4.865L1 16V1z" stroke="currentColor" stroke-width="1.5" /></svg>
                         </span>
-                        <span class="visually-hidden">Добавить в закладки</span>
+                        <span class="sub-link__text sub-link__text--hide">Добавить статью в закладки?</span>
                       </a>
-                      <div class="review__counts">
-                        <a class="review__count" href="#">
-                          <span class="review__count-icon">
-                            <svg viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M12 7.462c.32 0 .579-.242.579-.539 0-.297-.26-.538-.579-.538-.32 0-.579.24-.579.538 0 .297.26.539.579.539z" stroke="currentColor" stroke-opacity=".4" stroke-linecap="round" stroke-linejoin="round" />
-                              <path d="M12 12.846c2.878 0 5.21-2.17 5.21-4.846S14.878 3.154 12 3.154 6.79 5.324 6.79 8c0 2.677 2.332 4.846 5.21 4.846z" stroke="currentColor" stroke-opacity=".4" stroke-linecap="round" stroke-linejoin="round" />
-                              <path d="M1 8s3.929-7 11-7 11 7 11 7-3.929 7-11 7S1 8 1 8z" stroke="currentColor" stroke-opacity=".4" stroke-linecap="round" stroke-linejoin="round" /></svg>
-                          </span>
-                          <span class="review__count-text visually-hidden">Кол-во просмотров</span>
-                          <span class="review__count-text">37</span>
-                        </a>
-                        <a class="review__count" href="#">
-                          <span class="review__count-icon">
-                            <svg viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M9 13c4.418 0 8-2.686 8-6s-3.582-6-8-6-8 2.686-8 6c0 2.236 1.631 4.187 4.05 5.219.057 1.388-.483 2.726-1.764 2.726.99.179 3.395.017 5.417-1.95C8.8 13 8.9 13 9 13z" stroke="currentColor" stroke-opacity=".4" /></svg>
-                          </span>
-                          <span class="review__count-text visually-hidden">Кол-во комментариев</span>
-                          <span class="review__count-text">2</span>
-                        </a>
-                      </div>
-                    </header>
-                    <footer class="review__content">
-                      <a class="review__link" href="#">
-                        <h3 class="review__title">«Шальные годы» Монпарнаса</h3>
-                      </a>
-                      <p class="review__text">В Музее изобразительных искусств имени Пушкина с 29 сентября по 29 ноября проходит выставка «Шальные годы Монпарнаса»</p>
-                    </footer>
+                    </aside>
+                    <a class="news__link" href="#">
+                      <h3 class="news__lead">Открытие нового памятника Евгению Леонову</h3>
+                    </a>
+                    <p class="news__text">10 сентября в 15:00 был открыт памятник писателю</p>
                   </article>
-                  <article class="review">
-                    <header class="review__header">
-                      <a class="review__image" href="#">
-                        <img src="./img/review-2.jpg" alt="Анатомия за 30 секунд">
+                  <article class="last-news__item news">
+                    <aside class="news__aside">
+                      <a class="news__poster" href="#">
+                        <picture>
+                          <source type="image/webp" srcset="img/article-3.webp">
+                          <source type="image/jpeg" srcset="img/article-3.jpg">
+                          <img src="img/article-3.jpg" alt="Беседы с писателями">
+                        </picture>
                       </a>
-                      <a class="review__bookmark" href="#">
-                        <span class="review__bookmark-icon">
-                          <svg viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <a class="news__bookmark sub-link" href="#">
+                        <span class="sub-link__icon-wrap sub-link__icon-wrap--shrink">
+                          <svg class="sub-link__icon sub-link__icon--bookmark" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 1h12v15l-6-4.865L1 16V1z" stroke="currentColor" stroke-width="1.5" /></svg>
                         </span>
-                        <span class="visually-hidden">Добавить в закладки</span>
+                        <span class="sub-link__text sub-link__text--hide">Добавить статью в закладки?</span>
                       </a>
-                      <div class="review__counts">
-                        <a class="review__count" href="#">
-                          <span class="review__count-icon">
-                            <svg viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M12 7.462c.32 0 .579-.242.579-.539 0-.297-.26-.538-.579-.538-.32 0-.579.24-.579.538 0 .297.26.539.579.539z" stroke="currentColor" stroke-opacity=".4" stroke-linecap="round" stroke-linejoin="round" />
-                              <path d="M12 12.846c2.878 0 5.21-2.17 5.21-4.846S14.878 3.154 12 3.154 6.79 5.324 6.79 8c0 2.677 2.332 4.846 5.21 4.846z" stroke="currentColor" stroke-opacity=".4" stroke-linecap="round" stroke-linejoin="round" />
-                              <path d="M1 8s3.929-7 11-7 11 7 11 7-3.929 7-11 7S1 8 1 8z" stroke="currentColor" stroke-opacity=".4" stroke-linecap="round" stroke-linejoin="round" /></svg>
-                          </span>
-                          <span class="review__count-text visually-hidden">Кол-во просмотров</span>
-                          <span class="review__count-text">37</span>
-                        </a>
-                        <a class="review__count" href="#">
-                          <span class="review__count-icon">
-                            <svg viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M9 13c4.418 0 8-2.686 8-6s-3.582-6-8-6-8 2.686-8 6c0 2.236 1.631 4.187 4.05 5.219.057 1.388-.483 2.726-1.764 2.726.99.179 3.395.017 5.417-1.95C8.8 13 8.9 13 9 13z" stroke="currentColor" stroke-opacity=".4" /></svg>
-                          </span>
-                          <span class="review__count-text visually-hidden">Кол-во комментариев</span>
-                          <span class="review__count-text">2</span>
-                        </a>
-                      </div>
-                    </header>
-                    <footer class="review__content">
-                      <a class="review__link" href="#">
-                        <h3 class="review__title">Анатомия за 30 секунд</h3>
-                      </a>
-                      <p class="review__text">Сейчас, когда мир открыт нараспашку для человека и его познавательных изысканий, интерес к научно-популярной литературе заметно вырос</p>
-                    </footer>
+                    </aside>
+                    <a class="news__link" href="#">
+                      <h3 class="news__lead">Беседы с писателями</h3>
+                    </a>
+                    <p class="news__text">Русские писатели говорят о важности искусства</p>
                   </article>
-                  <article class="review">
-                    <header class="review__header">
-                      <a class="review__image" href="#">
-                        <img src="./img/review-3.jpg" alt="Русские балетные сезоны">
+                  <article class="last-news__item news">
+                    <aside class="news__aside">
+                      <a class="news__poster" href="#">
+                        <picture>
+                          <source type="image/webp" srcset="img/article-4.webp">
+                          <source type="image/jpeg" srcset="img/article-4.jpg">
+                          <img src="img/article-4.jpg" alt="День и ночь св. Патрика: встреча старых друзей">
+                        </picture>
                       </a>
-                      <a class="review__bookmark" href="#">
-                        <span class="review__bookmark-icon">
-                          <svg viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <a class="news__bookmark sub-link" href="#">
+                        <span class="sub-link__icon-wrap sub-link__icon-wrap--shrink">
+                          <svg class="sub-link__icon sub-link__icon--bookmark" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 1h12v15l-6-4.865L1 16V1z" stroke="currentColor" stroke-width="1.5" /></svg>
                         </span>
-                        <span class="visually-hidden">Добавить в закладки</span>
+                        <span class="sub-link__text sub-link__text--hide">Добавить статью в закладки?</span>
                       </a>
-                      <div class="review__counts">
-                        <a class="review__count" href="#">
-                          <span class="review__count-icon">
-                            <svg viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M12 7.462c.32 0 .579-.242.579-.539 0-.297-.26-.538-.579-.538-.32 0-.579.24-.579.538 0 .297.26.539.579.539z" stroke="currentColor" stroke-opacity=".4" stroke-linecap="round" stroke-linejoin="round" />
-                              <path d="M12 12.846c2.878 0 5.21-2.17 5.21-4.846S14.878 3.154 12 3.154 6.79 5.324 6.79 8c0 2.677 2.332 4.846 5.21 4.846z" stroke="currentColor" stroke-opacity=".4" stroke-linecap="round" stroke-linejoin="round" />
-                              <path d="M1 8s3.929-7 11-7 11 7 11 7-3.929 7-11 7S1 8 1 8z" stroke="currentColor" stroke-opacity=".4" stroke-linecap="round" stroke-linejoin="round" /></svg>
-                          </span>
-                          <span class="review__count-text visually-hidden">Кол-во просмотров</span>
-                          <span class="review__count-text">37</span>
-                        </a>
-                        <a class="review__count" href="#">
-                          <span class="review__count-icon">
-                            <svg viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M9 13c4.418 0 8-2.686 8-6s-3.582-6-8-6-8 2.686-8 6c0 2.236 1.631 4.187 4.05 5.219.057 1.388-.483 2.726-1.764 2.726.99.179 3.395.017 5.417-1.95C8.8 13 8.9 13 9 13z" stroke="currentColor" stroke-opacity=".4" /></svg>
-                          </span>
-                          <span class="review__count-text visually-hidden">Кол-во комментариев</span>
-                          <span class="review__count-text">2</span>
-                        </a>
-                      </div>
-                    </header>
-                    <footer class="review__content">
-                      <a class="review__link" href="#">
-                        <h3 class="review__title">Русские балетные сезоны</h3>
-                      </a>
-                      <p class="review__text">В Новом Иерусалиме стартовал необычный культурно-развлекательный спектакль, который покажут в новом театре</p>
-                    </footer>
+                    </aside>
+                    <a class="news__link" href="#">
+                      <h3 class="news__lead">День и ночь св. Патрика: встреча старых друзей</h3>
+                    </a>
+                    <p class="news__text">Не Джойсом единым живет Ирландия! </p>
                   </article>
-                  <article class="review">
-                    <header class="review__header">
-                      <a class="review__image" href="#">
-                        <img src="./img/review-4.jpg" alt="Сферические чудаки">
+                </div>
+              </div>
+            </section>
+            <section class="main-page__section" data-aos="zoom-in-up">
+              <h2 class="main-page__title">Обзоры</h2>
+              <div class="reviews__items">
+                <article class="reviews__item review">
+                  <header class="review__head">
+                    <a class="review__poster" href="#">
+                      <picture>
+                        <source type="image/webp" srcset="img/review-1.webp">
+                        <source type="image/jpeg" srcset="img/review-1.jpg">
+                        <img src="img/review-1.jpg" alt="«Шальные годы» Монпарнаса">
+                      </picture>
+                    </a>
+                    <div class="review__sub-links">
+                      <a class="review__sub-link review__sub-link--view sub-link" href="#" target="_blank">
+                        <span class="sub-link__icon-wrap">
+                          <svg class="sub-link__icon sub-link__icon--eye" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 7.462c.32 0 .579-.242.579-.539 0-.297-.26-.538-.579-.538-.32 0-.579.24-.579.538 0 .297.26.539.579.539z" stroke="currentColor" stroke-opacity=".4" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M12 12.846c2.878 0 5.21-2.17 5.21-4.846S14.878 3.154 12 3.154 6.79 5.324 6.79 8c0 2.677 2.332 4.846 5.21 4.846z" stroke="currentColor" stroke-opacity=".4" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8s3.929-7 11-7 11 7 11 7-3.929 7-11 7S1 8 1 8z" stroke="currentColor" stroke-opacity=".4" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                        </span>
+                        <p class="sub-link__text">
+                          <span class="sub-link__text sub-link__text--hide">Кол-во просмотров:</span>37<span class="sub-link__text sub-link__text--hide">Отркыть статью в новой вкладке?</span>
+                        </p>
                       </a>
-                      <a class="review__bookmark" href="#">
-                        <span class="review__bookmark-icon">
-                          <svg viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <a class="review__sub-link review__sub-link--review sub-link" href="#" target="_blank">
+                        <span class="sub-link__icon-wrap">
+                          <svg class="sub-link__icon sub-link__icon--review" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 13c4.418 0 8-2.686 8-6s-3.582-6-8-6-8 2.686-8 6c0 2.236 1.631 4.187 4.05 5.219.057 1.388-.483 2.726-1.764 2.726.99.179 3.395.017 5.417-1.95C8.8 13 8.9 13 9 13z" stroke="currentColor" stroke-opacity=".4" /></svg>
+                        </span>
+                        <p class="sub-link__text">
+                          <span class="sub-link__text sub-link__text--hide">Кол-во комментарие:</span>2<span class="sub-link__text sub-link__text--hide">Перейти к комментариям?</span>
+                        </p>
+                      </a>
+                      <a class="review__sub-link review__sub-link--bookmark sub-link" href="#">
+                        <span class="sub-link__icon-wrap sub-link__icon-wrap--shrink">
+                          <svg class="sub-link__icon sub-link__icon--bookmark" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 1h12v15l-6-4.865L1 16V1z" stroke="currentColor" stroke-width="1.5" /></svg>
                         </span>
-                        <span class="visually-hidden">Добавить в закладки</span>
-                      </a>
-                      <div class="review__counts">
-                        <a class="review__count" href="#">
-                          <span class="review__count-icon">
-                            <svg viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M12 7.462c.32 0 .579-.242.579-.539 0-.297-.26-.538-.579-.538-.32 0-.579.24-.579.538 0 .297.26.539.579.539z" stroke="currentColor" stroke-opacity=".4" stroke-linecap="round" stroke-linejoin="round" />
-                              <path d="M12 12.846c2.878 0 5.21-2.17 5.21-4.846S14.878 3.154 12 3.154 6.79 5.324 6.79 8c0 2.677 2.332 4.846 5.21 4.846z" stroke="currentColor" stroke-opacity=".4" stroke-linecap="round" stroke-linejoin="round" />
-                              <path d="M1 8s3.929-7 11-7 11 7 11 7-3.929 7-11 7S1 8 1 8z" stroke="currentColor" stroke-opacity=".4" stroke-linecap="round" stroke-linejoin="round" /></svg>
-                          </span>
-                          <span class="review__count-text visually-hidden">Кол-во просмотров</span>
-                          <span class="review__count-text">37</span>
-                        </a>
-                        <a class="review__count" href="#">
-                          <span class="review__count-icon">
-                            <svg viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M9 13c4.418 0 8-2.686 8-6s-3.582-6-8-6-8 2.686-8 6c0 2.236 1.631 4.187 4.05 5.219.057 1.388-.483 2.726-1.764 2.726.99.179 3.395.017 5.417-1.95C8.8 13 8.9 13 9 13z" stroke="currentColor" stroke-opacity=".4" /></svg>
-                          </span>
-                          <span class="review__count-text visually-hidden">Кол-во комментариев</span>
-                          <span class="review__count-text">2</span>
-                        </a>
-                      </div>
-                    </header>
-                    <footer class="review__content">
-                      <a class="review__link" href="#">
-                        <h3 class="review__title">Сферические чудаки</h3>
-                      </a>
-                      <p class="review__text">Корреспондентам «Культурного обозревателя» посчастливилось побывать в театре «Сфера» на премьере спектакля «Чудаки и зануды» </p>
-                    </footer>
-                  </article>
-                  <footer class="reviews__pagination pagination">
-                    <div class="pagination__controls">
-                      <a href="#" class="pagination__control pagination__control--prev pagination__control--disabled">
-                        <span class="visually-hidden">Предыдущая</span>
-                      </a>
-                      <ul class="pagination__list">
-                        <li>
-                          <a class="pagination__link pagination__link--active" href="#">1</a>
-                        </li>
-                        <li>
-                          <a class="pagination__link" href="#">2</a>
-                        </li>
-                        <li>
-                          <a class="pagination__link" href="#">3</a>
-                        </li>
-                        <li>
-                          <a class="pagination__link" href="#">4</a>
-                        </li>
-                        <li>
-                          <a class="pagination__link" href="#">5</a>
-                        </li>
-                        <li>
-                          <a class="pagination__link" href="#">...</a>
-                        </li>
-                        <li>
-                          <a class="pagination__link" href="#">35</a>
-                        </li>
-                      </ul>
-                      <a href="#" class="pagination__control pagination__control--next">
-                        <span class="visually-hidden">Следущая</span>
+                        <span class="sub-link__text sub-link__text--hide">Добавить статью в закладки?</span>
                       </a>
                     </div>
-                  </footer>
+                  </header>
+                  <a class="review__link" href="#" target="_blank">
+                    <h3 class="review__title">«Шальные годы» Монпарнаса</h3>
+                  </a>
+                  <p class="review__text">В Музее изобразительных искусств имени Пушкина с 29 сентября по 29 ноября проходит выставка «Шальные годы Монпарнаса»</p>
+                </article>
+                <article class="reviews__item review">
+                  <header class="review__head">
+                    <a class="review__poster" href="#">
+                      <picture>
+                        <source type="image/webp" srcset="img/review-2.webp">
+                        <source type="image/jpeg" srcset="img/review-2.jpg">
+                        <img src="img/review-2.jpg" alt="Анатомия за 30 секунд">
+                      </picture>
+                    </a>
+                    <div class="review__sub-links">
+                      <a class="review__sub-link review__sub-link--view sub-link" href="#" target="_blank">
+                        <span class="sub-link__icon-wrap">
+                          <svg class="sub-link__icon sub-link__icon--eye" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 7.462c.32 0 .579-.242.579-.539 0-.297-.26-.538-.579-.538-.32 0-.579.24-.579.538 0 .297.26.539.579.539z" stroke="currentColor" stroke-opacity=".4" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M12 12.846c2.878 0 5.21-2.17 5.21-4.846S14.878 3.154 12 3.154 6.79 5.324 6.79 8c0 2.677 2.332 4.846 5.21 4.846z" stroke="currentColor" stroke-opacity=".4" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8s3.929-7 11-7 11 7 11 7-3.929 7-11 7S1 8 1 8z" stroke="currentColor" stroke-opacity=".4" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                        </span>
+                        <p class="sub-link__text">
+                          <span class="sub-link__text sub-link__text--hide">Кол-во просмотров:</span>37<span class="sub-link__text sub-link__text--hide">Отркыть статью в новой вкладке?</span>
+                        </p>
+                      </a>
+                      <a class="review__sub-link review__sub-link--review sub-link" href="#" target="_blank">
+                        <span class="sub-link__icon-wrap">
+                          <svg class="sub-link__icon sub-link__icon--review" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 13c4.418 0 8-2.686 8-6s-3.582-6-8-6-8 2.686-8 6c0 2.236 1.631 4.187 4.05 5.219.057 1.388-.483 2.726-1.764 2.726.99.179 3.395.017 5.417-1.95C8.8 13 8.9 13 9 13z" stroke="currentColor" stroke-opacity=".4" /></svg>
+                        </span>
+                        <p class="sub-link__text">
+                          <span class="sub-link__text sub-link__text--hide">Кол-во комментарие:</span>2<span class="sub-link__text sub-link__text--hide">Перейти к комментариям?</span>
+                        </p>
+                      </a>
+                      <a class="review__sub-link review__sub-link--bookmark sub-link" href="#">
+                        <span class="sub-link__icon-wrap sub-link__icon-wrap--shrink">
+                          <svg class="sub-link__icon sub-link__icon--bookmark" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1h12v15l-6-4.865L1 16V1z" stroke="currentColor" stroke-width="1.5" /></svg>
+                        </span>
+                        <span class="sub-link__text sub-link__text--hide">Добавить статью в закладки?</span>
+                      </a>
+                    </div>
+                  </header>
+                  <a class="review__link" href="#" target="_blank">
+                    <h3 class="review__title">Анатомия за 30 секунд</h3>
+                  </a>
+                  <p class="review__text">Сейчас, когда мир открыт нараспашку для человека и его познавательных изысканий, интерес к научно-популярной литературе заметно вырос</p>
+                </article>
+                <article class="reviews__item review">
+                  <header class="review__head">
+                    <a class="review__poster" href="#">
+                      <picture>
+                        <source type="image/webp" srcset="img/review-3.webp">
+                        <source type="image/jpeg" srcset="img/review-3.jpg">
+                        <img src="img/review-3.jpg" alt="Русские балетные сезоны ">
+                      </picture>
+                    </a>
+                    <div class="review__sub-links">
+                      <a class="review__sub-link review__sub-link--view sub-link" href="#" target="_blank">
+                        <span class="sub-link__icon-wrap">
+                          <svg class="sub-link__icon sub-link__icon--eye" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 7.462c.32 0 .579-.242.579-.539 0-.297-.26-.538-.579-.538-.32 0-.579.24-.579.538 0 .297.26.539.579.539z" stroke="currentColor" stroke-opacity=".4" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M12 12.846c2.878 0 5.21-2.17 5.21-4.846S14.878 3.154 12 3.154 6.79 5.324 6.79 8c0 2.677 2.332 4.846 5.21 4.846z" stroke="currentColor" stroke-opacity=".4" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8s3.929-7 11-7 11 7 11 7-3.929 7-11 7S1 8 1 8z" stroke="currentColor" stroke-opacity=".4" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                        </span>
+                        <p class="sub-link__text">
+                          <span class="sub-link__text sub-link__text--hide">Кол-во просмотров:</span>37<span class="sub-link__text sub-link__text--hide">Отркыть статью в новой вкладке?</span>
+                        </p>
+                      </a>
+                      <a class="review__sub-link review__sub-link--review sub-link" href="#" target="_blank">
+                        <span class="sub-link__icon-wrap">
+                          <svg class="sub-link__icon sub-link__icon--review" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 13c4.418 0 8-2.686 8-6s-3.582-6-8-6-8 2.686-8 6c0 2.236 1.631 4.187 4.05 5.219.057 1.388-.483 2.726-1.764 2.726.99.179 3.395.017 5.417-1.95C8.8 13 8.9 13 9 13z" stroke="currentColor" stroke-opacity=".4" /></svg>
+                        </span>
+                        <p class="sub-link__text">
+                          <span class="sub-link__text sub-link__text--hide">Кол-во комментарие:</span>2<span class="sub-link__text sub-link__text--hide">Перейти к комментариям?</span>
+                        </p>
+                      </a>
+                      <a class="review__sub-link review__sub-link--bookmark sub-link" href="#">
+                        <span class="sub-link__icon-wrap sub-link__icon-wrap--shrink">
+                          <svg class="sub-link__icon sub-link__icon--bookmark" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1h12v15l-6-4.865L1 16V1z" stroke="currentColor" stroke-width="1.5" /></svg>
+                        </span>
+                        <span class="sub-link__text sub-link__text--hide">Добавить статью в закладки?</span>
+                      </a>
+                    </div>
+                  </header>
+                  <a class="review__link" href="#" target="_blank">
+                    <h3 class="review__title">Русские балетные сезоны</h3>
+                  </a>
+                  <p class="review__text">В Новом Иерусалиме стартовал необычный культурно-развлекательный спектакль, который покажут в новом театре</p>
+                </article>
+                <article class="reviews__item review">
+                  <header class="review__head">
+                    <a class="review__poster" href="#">
+                      <picture>
+                        <source type="image/webp" srcset="img/review-4.webp">
+                        <source type="image/jpeg" srcset="img/review-4.jpg">
+                        <img src="img/review-4.jpg" alt="Сферические чудаки">
+                      </picture>
+                    </a>
+                    <div class="review__sub-links">
+                      <a class="review__sub-link review__sub-link--view sub-link" href="#" target="_blank">
+                        <span class="sub-link__icon-wrap">
+                          <svg class="sub-link__icon sub-link__icon--eye" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 7.462c.32 0 .579-.242.579-.539 0-.297-.26-.538-.579-.538-.32 0-.579.24-.579.538 0 .297.26.539.579.539z" stroke="currentColor" stroke-opacity=".4" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M12 12.846c2.878 0 5.21-2.17 5.21-4.846S14.878 3.154 12 3.154 6.79 5.324 6.79 8c0 2.677 2.332 4.846 5.21 4.846z" stroke="currentColor" stroke-opacity=".4" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 8s3.929-7 11-7 11 7 11 7-3.929 7-11 7S1 8 1 8z" stroke="currentColor" stroke-opacity=".4" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                        </span>
+                        <p class="sub-link__text">
+                          <span class="sub-link__text sub-link__text--hide">Кол-во просмотров:</span>37<span class="sub-link__text sub-link__text--hide">Отркыть статью в новой вкладке?</span>
+                        </p>
+                      </a>
+                      <a class="review__sub-link review__sub-link--review sub-link" href="#" target="_blank">
+                        <span class="sub-link__icon-wrap">
+                          <svg class="sub-link__icon sub-link__icon--review" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 13c4.418 0 8-2.686 8-6s-3.582-6-8-6-8 2.686-8 6c0 2.236 1.631 4.187 4.05 5.219.057 1.388-.483 2.726-1.764 2.726.99.179 3.395.017 5.417-1.95C8.8 13 8.9 13 9 13z" stroke="currentColor" stroke-opacity=".4" /></svg>
+                        </span>
+                        <p class="sub-link__text">
+                          <span class="sub-link__text sub-link__text--hide">Кол-во комментарие:</span>2<span class="sub-link__text sub-link__text--hide">Перейти к комментариям?</span>
+                        </p>
+                      </a>
+                      <a class="review__sub-link review__sub-link--bookmark sub-link" href="#">
+                        <span class="sub-link__icon-wrap sub-link__icon-wrap--shrink">
+                          <svg class="sub-link__icon sub-link__icon--bookmark" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1h12v15l-6-4.865L1 16V1z" stroke="currentColor" stroke-width="1.5" /></svg>
+                        </span>
+                        <span class="sub-link__text sub-link__text--hide">Добавить статью в закладки?</span>
+                      </a>
+                    </div>
+                  </header>
+                  <a class="review__link" href="#" target="_blank">
+                    <h3 class="review__title">Сферические чудаки</h3>
+                  </a>
+                  <p class="review__text">Корреспондентам «Культурного обозревателя» посчастливилось побывать в театре «Сфера» на премьере спектакля «Чудаки и зануды» </p>
+                </article>
+              </div>
+              <footer class="reviews__pagination pagination">
+                <div class="pagination__controls">
+                  <a href="#" class="pagination__control pagination__control--prev pagination__control--disabled">
+                    <span class="pagination__control-text">Предыдущая</span>
+                  </a>
+                  <ul class="pagination__list">
+                    <li>
+                      <a class="pagination__link pagination__link--active" href="#">1</a>
+                    </li>
+                    <li>
+                      <a class="pagination__link" href="#">2</a>
+                    </li>
+                    <li>
+                      <a class="pagination__link" href="#">3</a>
+                    </li>
+                    <li>
+                      <a class="pagination__link" href="#">4</a>
+                    </li>
+                    <li>
+                      <a class="pagination__link" href="#">5</a>
+                    </li>
+                    <li>
+                      <a class="pagination__link" href="#">...</a>
+                    </li>
+                    <li>
+                      <a class="pagination__link" href="#">35</a>
+                    </li>
+                  </ul>
+                  <a href="#" class="pagination__control pagination__control--next">
+                    <span class="pagination__control-text">Следущая</span>
+                  </a>
                 </div>
-              </section>
-              <aside class="content__random-article random-article">
-                <div class="random-article__box" style="background-image: url(./img/random.jpg);">
-                  <div class="random-article__inner">
-                    <a class="random-article__title" href="#">Ох, уж этот балет</a>
-                    <a class="random-article__butoon button button--arrow" href="#">Смотреть</a>
-                  </div>
-                </div>
-              </aside>
-            </main>
-            <aside class="content__aside">
-              <ul class="events">
-                <li class="event">
-                  <span class="event__box event__image" style="background-image: url(./img/event-1.jpg);">
-                    <a href="#" class="event__title">Воздушные шары</a>
-                    <a href="#" class="event__button button button--arrow">Смотреть</a>
-                  </span>
-                </li>
-                <li class="event">
-                  <span class="event__box event__image" style="background-image: url(./img/event-2.jpg);">
-                    <a href="#" class="event__title event__title--dark">Необычная фотосессия</a>
-                    <a href="#" class="event__button button button--arrow">Смотреть</a>
-                  </span>
-                </li>
-                <li class="event">
-                  <span class="event__box event__image" style="background-image: url(./img/event-3.jpg);">
-                    <a href="#" class="event__title event__title--dark">Выставка птиц</a>
-                    <a href="#" class="event__button button button--arrow">Смотреть</a>
-                  </span>
-                </li>
-              </ul>
+              </footer>
+            </section>
+            <aside class="main-page__random-article random-article" data-aos="zoom-in-up">
+              <div class="random-article__inner">
+                <h3 class="random-article__title">Ох, уж этот балет</h3>
+                <a class="random-article__butoon button button--extend button--arrow" href="#">Смотреть</a>
+                <figure class="random-article__poster">
+                  <picture>
+                    <source type="image/webp" srcset="img/random.webp">
+                    <source type="image/jpeg" srcset="img/random.jpg">
+                    <img src="img/random.jpg" alt="Ох, уж этот балет">
+                  </picture>
+                </figure>
+              </div>
             </aside>
-            <aside class="content__small-slider small-slider">
-              <div class="small-slider__items">
-                <div class="small-slider__item">
-                  <div class="small-slider__box" style="background-image: url(./img/footer-slider-1.jpg);">
-                    <div class="small-slider__content">
-                      <a href="#" class="small-slider__title">Как все успевать</a>
-                      <a href="#" class="small-slider__button button button--mono">смотреть</a>
-                    </div>
-                  </div>
+          </main>
+          <aside class="main-page__aside events">
+            <div class="events__event event" data-aos="zoom-in-down">
+              <div class="evend__wrap">
+                <p class="event__name">Воздушные шары</p>
+                <a class="event__button button button--extend button--arrow" href="#">Смотреть</a>
+                <div class="event__poster">
+                  <picture>
+                    <source type="image/webp" srcset="img/event-1.webp">
+                    <source type="image/jpeg" srcset="img/event-1.jpg">
+                    <img src="img/event-1.jpg" alt="Воздушные шары">
+                  </picture>
                 </div>
-                <div class="small-slider__item">
-                  <div class="small-slider__box" style="background-image: url(./img/footer-slider-2.jpg);">
-                    <div class="small-slider__content">
-                      <a href="#" class="small-slider__title">Как все успевать</a>
-                      <a href="#" class="small-slider__button button button--mono">смотреть</a>
-                    </div>
-                  </div>
+              </div>
+            </div>
+            <div class="events__event event" data-aos="zoom-in-left">
+              <div class="evend__wrap">
+                <p class="event__name event__name--light">Необычная фотосессия</p>
+                <a class="event__button button button--extend button--arrow" href="#">Смотреть</a>
+                <div class="event__poster">
+                  <picture>
+                    <source type="image/webp" srcset="img/event-2.webp">
+                    <source type="image/jpeg" srcset="img/event-2.jpg">
+                    <img src="img/event-2.jpg" alt="Необычная фотосессия">
+                  </picture>
                 </div>
-                <div class="small-slider__item">
-                  <div class="small-slider__box" style="background-image: url(./img/footer-slider-3.jpg);">
-                    <div class="small-slider__content">
-                      <a href="#" class="small-slider__title">Как все успевать</a>
-                      <a href="#" class="small-slider__button button button--mono">смотреть</a>
-                    </div>
-                  </div>
+              </div>
+            </div>
+            <div class="events__event event" data-aos="zoom-in-right">
+              <div class="evend__wrap">
+                <p class="event__name event__name--light">Выставка птиц</p>
+                <a class="event__button button button--extend button--arrow" href="#">Смотреть</a>
+                <div class="event__poster">
+                  <picture>
+                    <source type="image/webp" srcset="img/event-3.webp">
+                    <source type="image/jpeg" srcset="img/event-3.jpg">
+                    <img src="img/event-3.jpg" alt="Выставка птиц">
+                  </picture>
                 </div>
-                <div class="small-slider__item">
-                  <div class="small-slider__box" style="background-image: url(./img/footer-slider-4.jpg);">
-                    <div class="small-slider__content">
-                      <a href="#" class="small-slider__title">Как все успевать</a>
-                      <a href="#" class="small-slider__button button button--mono">смотреть</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="small-slider__item">
-                  <div class="small-slider__box" style="background-image: url(./img/footer-slider-4.jpg);">
-                    <div class="small-slider__content">
-                      <a href="#" class="small-slider__title">Как все успевать</a>
-                      <a href="#" class="small-slider__button button button--mono">смотреть</a>
-                    </div>
+              </div>
+            </div>
+          </aside>
+          <aside class="main-page__see-also see-also see-also--hide" data-aos="zoom-in-down">
+            <div class="see-also__slides">
+              <div class="see-also__slide">
+                <div class="see-also__box">
+                  <figure class="see-also__poster">
+                    <picture>
+                      <source type="image/webp" srcset="img/footer-slider-1.webp">
+                      <source type="image/jpeg" srcset="img/footer-slider-1.jpg">
+                      <img src="img/footer-slider-1.jpg" alt="Как все успевать">
+                    </picture>
+                  </figure>
+                  <div class="see-also__band">
+                    <p class="see-also__lead">Как все успевать</p>
+                    <a class="see-also__more button button--extend button--mono" href="#">Cмотреть</a>
                   </div>
                 </div>
               </div>
-              <div class="small-slider__controls">
-                <button class="small-slider__control small-slider__control--prev">
-                  <span class="visually-hidden">Предыдущая</span>
-                </button>
-                <button class="small-slider__control small-slider__control--next">
-                  <span class="visually-hidden">Следущая</span>
-                </button>
+              <div class="see-also__slide">
+                <div class="see-also__box">
+                  <figure class="see-also__poster">
+                    <picture>
+                      <source type="image/webp" srcset="img/footer-slider-2.webp">
+                      <source type="image/jpeg" srcset="img/footer-slider-2.jpg">
+                      <img src="img/footer-slider-2.jpg" alt="Как все успевать">
+                    </picture>
+                  </figure>
+                  <div class="see-also__band">
+                    <p class="see-also__lead">Как все успевать</p>
+                    <a class="see-also__more button button--extend button--mono" href="#">Cмотреть</a>
+                  </div>
+                </div>
               </div>
-            </aside>
-          </div>
+              <div class="see-also__slide">
+                <div class="see-also__box">
+                  <figure class="see-also__poster">
+                    <picture>
+                      <source type="image/webp" srcset="img/footer-slider-3.webp">
+                      <source type="image/jpeg" srcset="img/footer-slider-3.jpg">
+                      <img src="img/footer-slider-3.jpg" alt="Как все успевать">
+                    </picture>
+                  </figure>
+                  <div class="see-also__band">
+                    <p class="see-also__lead">Как все успевать</p>
+                    <a class="see-also__more button button--extend button--mono" href="#">Cмотреть</a>
+                  </div>
+                </div>
+              </div>
+              <div class="see-also__slide">
+                <div class="see-also__box">
+                  <figure class="see-also__poster">
+                    <picture>
+                      <source type="image/webp" srcset="img/footer-slider-4.webp">
+                      <source type="image/jpeg" srcset="img/footer-slider-4.jpg">
+                      <img src="img/footer-slider-4.jpg" alt="Как все успевать">
+                    </picture>
+                  </figure>
+                  <div class="see-also__band">
+                    <p class="see-also__lead">Как все успевать</p>
+                    <a class="see-also__more button button--extend button--mono" href="#">Cмотреть</a>
+                  </div>
+                </div>
+              </div>
+              <div class="see-also__slide">
+                <div class="see-also__box">
+                  <figure class="see-also__poster">
+                    <picture>
+                      <source type="image/webp" srcset="img/footer-slider-3.webp">
+                      <source type="image/jpeg" srcset="img/footer-slider-3.jpg">
+                      <img src="img/footer-slider-3.jpg" alt="Как все успевать">
+                    </picture>
+                  </figure>
+                  <div class="see-also__band">
+                    <p class="see-also__lead">Как все успевать</p>
+                    <a class="see-also__more button button--extend button--mono" href="#">Cмотреть</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="see-also__control see-also__control--prev">
+              <span class="see-also__control-text">Предыдущая</span>
+            </button>
+            <button class="see-also__control see-also__control--next">
+              <span class="see-also__control-text">Следущая</span>
+            </button>
+          </aside>
         </div>
       </div>
-      <footer class="footer">
+      <footer class="footer" data-aos="fade-zoom-in">
         <div class="container">
           <div class="footer__top">
             <p class="footer__logo logo">Новости культуры</p>
@@ -509,35 +648,6 @@
         </div>
       </footer>
     </div>
-    <!-- END content -->
-    <!-- BEGIN scripts -->
     <script src="js/app.js"></script>
-    <script>
-      var menu = new MmenuLight(document.querySelector('#main-menu'), '(max-width: 1199.98px)');
-      var navigator = menu.navigation(
-      {
-        // selectedClass: 'Selected',
-        // slidingSubmenus: true,
-        // theme: 'dark',
-        title: ''
-      });
-      var drawer = menu.offcanvas(
-      {
-        // position: 'left'
-      });
-      //	Open the menu.
-      document.querySelector('.main-menu__control.main-menu__control--open').addEventListener('click', evnt =>
-      {
-        evnt.preventDefault();
-        drawer.open();
-      });
-      document.querySelector('.main-menu__control.main-menu__control--close').addEventListener('click', evnt =>
-      {
-        evnt.preventDefault();
-        drawer.close();
-      });
-
-    </script>
-    <!-- END scripts -->
   </body>
 </html>
