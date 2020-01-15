@@ -12,7 +12,7 @@
 *~
 
 # OS or Editor folders
-build
+build/
 .DS_Store
 ._*
 Thumbs.db
