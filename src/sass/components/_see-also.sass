@@ -1,0 +1,205 @@
+.see-also
+	position: relative
+	height: auto
+	background-color: $gray-1
+	visibility: visible
+	opacity: 1
+	transition: all .75s ease-in-out
+
+.see-also--hide
+	height: 0
+	overflow: hidden
+	visibility: hidden
+	opacity: 0
+
+.see-also__slides
+	position: relative
+
+.see-also__slides::before,
+.see-also__slides::after
+	content: ""
+	position: absolute
+	top: -5px
+	bottom: -5px
+	z-index: 1
+	display: block
+	width: 30px
+
+.see-also__slides::before
+	left: -5px
+	background: linear-gradient(to left,#FFF,#FFF), radial-gradient(farthest-side at 0 50%, rgba(0,0,0,0.2), transparent)
+	background-repeat: no-repeat
+	background-size: 20px 100%, 10px 100%
+	background-position: 0 0, 20px 0
+
+.see-also__slides::after
+	right: -5px
+	background: linear-gradient(to left,#FFF,#FFF), radial-gradient(farthest-side at 0 50%, rgba(0,0,0,0.2), transparent)
+	background-repeat: no-repeat
+	background-size: 20px 100%, 10px 100%
+	background-position: 0 0, 20px 0
+	transform: rotate(180deg)
+
+.see-also__slide
+	position: relative
+	padding: 0 15px
+
+.see-also__box
+	position: relative
+
+.see-also__box::before,
+.see-also__box::after
+	@media (min-width: 992px)
+		content: ""
+		position: absolute
+		right: -5px
+		left: -5px
+		z-index: 10
+		display: block
+		height: 18px
+		background-color: $white
+		transition: all .25s ease-in-out
+
+.see-also__box::before
+	@media (min-width: 992px)
+		top: -5px
+
+.see-also__box::after
+	@media (min-width: 992px)
+		bottom: -5px
+
+.see-also__box:focus::before,
+.see-also__box:hover::before
+	@media (min-width: 992px)
+		top: -100%
+
+.see-also__box:focus::after,
+.see-also__box:hover::after
+	@media (min-width: 992px)
+		bottom: -100%
+
+.see-also__poster
+	position: absolute
+	top: 0
+	right: 0
+	left: 0
+	bottom: 0
+	display: block
+	overflow: hidden
+
+.see-also__poster::before
+	content: ""
+	position: absolute
+	top: 0
+	right: 0
+	left: 0
+	bottom: 0
+	display: block
+	background-color: rgba(0,0,0,.7)
+	transition: all .2s ease-in-out
+	@media (min-width: 992px)
+		background-color: transparent
+
+.see-also__box:focus .see-also__poster::before,
+.see-also__box:hover .see-also__poster::before
+	background-color: rgba(0,0,0,.7)
+
+.see-also__poster img
+	display: block
+	width: 100%
+	height: 100%
+	object-fit: cover
+
+.see-also__band
+	position: relative
+	display: block
+	padding: 40px 15px 20px
+	min-height: 145px
+	text-align: center
+	overflow: hidden
+	@media (min-width: 992px)
+		min-height: 135px
+
+.see-also__lead
+	display: block
+	margin-bottom: 10px
+	+base
+	font-weight: 600
+	font-size: 16px
+	line-height: 1.25
+	text-decoration: none
+	text-transform: uppercase
+	letter-spacing: 2px
+	text-overflow: ellipsis
+	white-space: nowrap
+	overflow: hidden
+	color: $white
+	transition: all .2s ease-in-out 0.15s
+	@media (min-width: 992px)
+		transform: translateY(-300%)
+		opacity: 0
+
+.see-also__box:focus .see-also__lead,
+.see-also__box:hover .see-also__lead
+	@media (min-width: 992px)
+		transform: translateY(0)
+		transform: unset
+		opacity: 1
+
+.see-also__more
+	padding: 5px 15px
+	font-size: 12px
+	line-height: 1.5
+	letter-spacing: 2px
+	transition: all .2s ease-in-out 0.15s
+	@media (min-width: 992px)
+		transform: translateY(300%)
+		opacity: 0
+
+.see-also__box:focus .see-also__more,
+.see-also__box:hover .see-also__more
+	@media (min-width: 992px)
+		transform: translateY(0)
+		transform: unset
+		opacity: 1
+
+.see-also__control-text
+	+visually-hidden
+
+.see-also__control
+	position: absolute
+	top: 50%
+	z-index: 55
+	transform: translateY(-50%)
+	display: flex
+	height: 44px
+	width: 44px
+	background-color: rgba($white, 0.85)
+	background-image: url("data:image/svg+xml,%3Csvg width='13' height='14' viewBox='0 0 13 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.707092 7.00326L5.88346 1.87465L5.86185 6.53794L5.8357 12.1796L0.707092 7.00326Z' fill='black' stroke='black'/%3E%3C/svg%3E%0A")
+	background-repeat: no-repeat
+	background-position: center
+	background-size: 9px
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15)
+	border-radius: 1px
+	transition: all 0.15s ease
+	@media (max-width: 575.98px)
+		display: none
+
+.see-also__control:focus,
+.see-also__control:hover
+	background-color: $white
+
+.see-also__control:active
+	background-color: $white
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1)
+
+.see-also__control--prev
+	left: 0
+	@media (min-width: 1200px)
+		left: -7px
+
+.see-also__control--next
+	right: 0
+	transform: translateY(-50%) rotate(180deg)
+	@media (min-width: 1200px)
+		right: -7px

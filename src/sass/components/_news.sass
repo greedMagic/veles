@@ -1,0 +1,142 @@
+.news
+	position: relative
+	&::after
+		content: ""
+		clear: both
+		display: table
+
+.news__aside
+	position: relative
+	float: left
+	width: 47%
+	margin-right: 3%
+
+.news__poster
+	position: relative
+	display: block
+	padding-bottom: 71.65%
+	overflow: hidden
+	background-color: $gray-1
+
+.news__poster::before
+	content: ''
+	position: absolute
+	top: 0
+	right: 0
+	left: 0
+	left: 0
+	z-index: 10
+	display: block
+	width: 100%
+	height: 100%
+	background-color: transparent
+	transition: background .2s ease-in-out
+
+.news__poster:hover::before,
+.news__poster:focus::before,
+.news__aside:hover .news__poster::before,
+.news__aside:focus .news__poster::before
+	background-color: rgba(0,0,0,.7)
+
+.news__aside:focus-within .news__poster::before
+	background-color: rgba(0,0,0,.7)
+
+.news__poster img
+	position: absolute
+	top: 0
+	right: 0
+	left: 0
+	bottom: 0
+	display: block
+	height: 100%
+	max-width: 100%
+	object-fit: cover
+	transform: scale(1)
+	transform-origin: center center
+	transition: transform .2s ease-in-out
+
+.news__poster:focus img,
+.news__poster:hover img,
+.news__aside:hover .news__poster img,
+.news__aside:focus .news__poster img
+	transform: scale(1.1)
+
+.news__aside:focus-within .news__poster img
+	transform: scale(1.1)
+
+.news__bookmark
+	position: absolute
+	top: 0
+	right: 0
+	z-index: 35
+	display: inline-flex
+	padding: 10px 8px
+	visibility: hidden
+	transform:  translateY(-100%)
+	transition: transform .2s ease-in-out
+
+.news__bookmark:hover,
+.news__bookmark:focus,
+.news__aside:hover .news__bookmark,
+.news__aside:focus .news__bookmark
+	transform:  translateY(0)
+	visibility: visible
+
+.news__aside:focus-within .news__bookmark
+	transform:  translateY(0)
+	visibility: visible
+
+.news__link
+	color: $color-base
+	text-decoration: none
+	transition: color .2s ease-in-out
+	&:focus,
+	&:hover
+		color: $color-emphasis
+	&:active
+		color: rgba($color-emphasis, 0.7)
+
+.news__lead
+	margin-bottom: 4px
+	+title
+	font-size: 14px
+	line-height: 1.4
+	color: inherit
+
+.news__text
+	+base
+	font-size: 10px
+	line-height: 1.5
+	color: $color-base
+
+.news.news--big .news__aside
+	width: 100%
+	margin-right: unset
+	float: unset
+
+.news.news--big .news__lead
+	font-size: 20px
+
+.news.news--big .news__text
+	font-size: 14px
+
+.news.news--big .news__band-text
+	position: absolute
+	right: -5px
+	left: -5px
+	bottom: 0
+	z-index: 10
+	display: block
+	padding: 15px 25px
+	background-color: transparent
+	transition: background .2s ease-in-out
+
+.news:hover .news__band-text,
+.news:focus .news__band-text,
+.news__band:hover .news__band-text,
+.news__band:focus .news__band-text
+	background-color: $gray-1
+
+.news:focus-within .news__band-text
+	background-color: $gray-1
+

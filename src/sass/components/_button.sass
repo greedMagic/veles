@@ -1,0 +1,65 @@
+.button
+	display: inline-flex
+	justify-content: center
+	align-items: center
+	padding: 9px 15px
+	+base
+	font-weight: 600
+	font-size: 12px
+	line-height: 1.35
+	text-decoration: none
+	text-transform: uppercase
+	letter-spacing: 2px
+	color: $white
+	background-color: rgba(0, 0, 0, 0.7)
+	border: 2px solid $color-emphasis
+	transition: background-color .2s ease-in-out, color .2s ease-in-out
+
+.button:focus,
+.button:hover
+	background-color: $color-emphasis
+
+.button:active
+	background-color: rgba($color-emphasis, .9)
+
+.button--arrow::after
+	content: ""
+	position: relative
+	display: inline-flex
+	margin-left: 5px
+	margin-right: -5px
+	width: 30px
+	height: 25px
+	background-image: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12 4L10.6 5.4L16.2 11H4V13H16.2L10.6 18.6L12 20L20 12L12 4Z' fill='white'/%3E%3C/svg%3E%0A")
+	background-repeat: no-repeat
+	background-size: 24px 25px
+	background-position: left 2px center
+	transition: background-position 0.25s ease-in-out
+
+.button--arrow:focus::after,
+.button--arrow:hover::after
+	background-position: left 5px center
+
+.button--mono
+	background: rgba(0, 0, 0, 0.3)
+	border: 1px solid $white
+
+.button--mono:focus,
+.button--mono:hover
+	color: $color-base
+	background-color: $white
+
+.button--mono:active
+	background-color: rgba($white, .9)
+
+.button--extend::before
+	content: ""
+	position: absolute
+	top: 0
+	right: 0
+	left: 0
+	bottom: 0
+	z-index: 5
+	display: block
+	width: 100%
+	height: 100%

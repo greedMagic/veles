@@ -3,12 +3,13 @@
 
 .pagination__controls
 	+row
-	padding-right: 15px
-	padding-left: 15px
 
 .pagination__list
 	+row
 	margin: 0 auto
+
+.pagination__control-text
+	+visually-hidden
 
 .pagination__control
 	position: relative
@@ -16,75 +17,96 @@
 	width: 30px
 	height: 30px
 	opacity: 0.5
-	transition: opacity .15s ease
-	&::before
-		position: absolute
-		top: 50%
-		transform: translateY(-50%)
-		display: block
-		width: 9px
-		height: 9px
-		content: ""
-		background-image: url(../img/rhombus.svg)
-		background-size: 100%
-		background-repeat: no-repeat
-		transition: all .15s ease
-	&::after
-		position: absolute
-		top: 1.5px
-		right: 0
-		bottom: 1.5px
-		content: ""
-		display: block
-		width: 1px
-		background-color: $color-base
-		transition: all .15s ease
-	&:focus,
-	&:hover
-		opacity: 1
-	&:active
-		opacity: 0.3
-	&:focus::before,
-	&:hover::before,
-	&:active::before
-		width: 18px
-		height: 18px
+	transition: opacity .2s ease-in-out
 
-.pagination__control.pagination__control--disabled
+.pagination__control:focus,
+.pagination__control:hover
+	opacity: 1
+
+.pagination__control:active
+	opacity: 0.3
+
+.pagination__control::before
+	content: ""
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+	display: block
+	width: 25px
+	height: 25px
+	background-image: url("data:image/svg+xml,%3Csvg width='13' height='14' viewBox='0 0 13 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.707092 7.00326L5.88346 1.87465L5.86185 6.53794L5.8357 12.1796L0.707092 7.00326Z' fill='black' stroke='black'/%3E%3C/svg%3E%0A")
+	background-size: 25px 25px
+	background-position: left center
+	background-repeat: no-repeat
+	transition: all .2s ease-in-out
+	@media (min-width: 768px)
+		background-size: 9px 9px
+
+.pagination__control:focus::before,
+.pagination__control:hover::before,
+.pagination__control:active::before
+	background-size: 25px 25px
+	@media (min-width: 768px)
+		background-size: 18px 18px
+
+.pagination__control::after
+	content: ""
+	position: absolute
+	top: 1.5px
+	right: 0
+	display: none
+	bottom: 1.5px
+	width: 1px
+	background-color: $color-base
+	transition: all .2s ease-in-out
+	@media (min-width: 768px)
+		display: block
+
+.pagination__control--prev::before
+	left: 0
+
+.pagination__control--prev::after
+	right: 0
+
+.pagination__control--prev:focus::after,
+.pagination__control--prev:hover::after,
+.pagination__control--prev:active::after
+	right: 5px
+
+
+.pagination__control--next::before
+	right: 0
+	transform: translateY(-50%) rotate(180deg)
+
+.pagination__control--next::after
+	left: 0
+
+.pagination__control--next:focus::after,
+.pagination__control--next:hover::after,
+.pagination__control--next:active::after
+	left: 5px
+
+
+.pagination__control.pagination__control--disabled,
+.pagination__control.pagination__control--disabled:focus,
+.pagination__control.pagination__control--disabled:hover,
+.pagination__control.pagination__control--disabled:active
 	opacity: 0.1
 	cursor: default
-	&:focus::before,
-	&:hover::before,
-	&:active::before
-		width: 9px
-		height: 9px
 
-.pagination__control--prev
-	&::before
-		left: 0
-	&::after,
-	&.pagination__control--disabled:focus::after,
-	&.pagination__control--disabled:hover::after,
-	&.pagination__control--disabled:active::after
-		right: 0
-	&:focus::after,
-	&:hover::after,
-	&:active::after
-		right: 5px
+.pagination__control.pagination__control--disabled::before,
+.pagination__control.pagination__control--disabled:focus::before,
+.pagination__control.pagination__control--disabled:hover::before,
+.pagination__control.pagination__control--disabled:active::before
+	@media (min-width: 768px)
+		background-size: 9px 9px
 
-.pagination__control--next
-	&::before
-		right: 0
-		transform: translateY(-50%) rotate(180deg)
-	&::after,
-	&.pagination__control--disabled:focus::after,
-	&.pagination__control--disabled:hover::after,
-	&.pagination__control--disabled:active::after
-		left: 0
-	&:focus::after,
-	&:hover::after,
-	&:active::after
-		left: 5px
+.pagination__control--prev.pagination__control--disabled::after
+	right: 0
+
+.pagination__control--next.pagination__control--disabled::after
+	left: 0
+
 
 .pagination__link
 	display: flex
@@ -98,25 +120,30 @@
 	text-decoration: none
 	color: lighten($color-base, 40%)
 	background-color: transparent
-	transition: all .15s ease
-	&:not(.pagination__link--active):focus,
-	&:not(.pagination__link--active):hover
-		color: $color-base
-		background-color: lighten($color-base, 80%)
+	transition: all .2s ease-in-out
 
-.pagination__link--active
+.pagination__link:focus,
+.pagination__link:hover
+	color: $color-base
+	background-color: lighten($color-base, 80%)
+
+.pagination__link.pagination__link--active,
+.pagination__link.pagination__link--active:focus,
+.pagination__link.pagination__link--active:hover,
+.pagination__link.pagination__link--active:active
 	position: relative
 	font-size: 20px
 	color: $color-base
 	cursor: default
-	&::after
-		position: absolute
-		bottom: -1px
-		right: 0
-		left: 0
-		display: block
-		margin: 0 auto
-		height: 3px
-		width: 13px
-		content: ""
-		background-color: $color-emphasis
+
+.pagination__link.pagination__link--active::after
+	content: ""
+	position: absolute
+	right: 0
+	left: 0
+	bottom: -1px
+	display: block
+	margin: 0 auto
+	height: 3px
+	width: 13px
+	background-color: $color-emphasis

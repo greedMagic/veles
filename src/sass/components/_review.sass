@@ -1,0 +1,129 @@
+.review__head
+	position: relative
+
+.review__poster
+	position: relative
+	display: block
+	padding-bottom: 55%
+	overflow: hidden
+	background-color: $gray-1
+
+.review__poster::before
+	content: ''
+	position: absolute
+	top: 0
+	right: 0
+	left: 0
+	left: 0
+	z-index: 10
+	display: block
+	width: 100%
+	height: 100%
+	background-color: transparent
+	transition: background .2s ease-in-out
+
+.review__poster:focus::before,
+.review__poster:hover::before,
+.review__head:hover .review__poster::before,
+.review__head:focus .review__poster::before
+	background-color: rgba(0,0,0,.7)
+
+.review__head:focus-within .review__poster::before
+	background-color: rgba(0,0,0,.7)
+
+.review__poster img
+	position: absolute
+	top: 0
+	right: 0
+	left: 0
+	bottom: 0
+	display: block
+	height: 100%
+	max-width: 100%
+	object-fit: cover
+	transform: scale(1.025)
+	transform-origin: center center
+	transition: transform .2s ease-in-out
+
+.review__poster:focus img,
+.review__poster:hover img,
+.review__head:hover .review__poster img,
+.review__head:focus .review__poster img
+	transform: scale(1.1)
+
+.review__head:focus-within .review__poster img
+	transform: scale(1.1)
+
+.review__sub-links
+	position: absolute
+	top: 0
+	left: 0
+	display: flex
+	align-items: flex-end
+	width: 100%
+	height: 100%
+	overflow: hidden
+
+.review__sub-link
+	position: relative
+	z-index: 35
+	display: inline-flex
+	padding: 15px 8px
+	visibility: hidden
+	transition: transform .2s ease-in-out
+
+.review__sub-link--view
+	margin-left: 5px
+
+.review__sub-link--bookmark
+	margin-left: auto
+	padding: 10px 8px
+	align-self: flex-start
+	transform:  translateY(-100%)
+
+.review__sub-link--view,
+.review__sub-link--review
+	transform:  translateY(100%)
+
+.review__sub-link:hover,
+.review__sub-link:focus,
+.review__head:hover .review__sub-link,
+.review__head:focus .review__sub-link
+	transform:  translateY(0)
+	visibility: visible
+
+.review__head:focus-within .review__sub-link
+	transform:  translateY(0)
+	visibility: visible
+
+.review__title
+	display: block
+	margin-top: 15px
+	margin-bottom: 8px
+	+title
+	font-size: 23px
+	line-height: 1.35
+	color: inherit
+	@media (min-width: 768px)
+		margin-top: 20px
+		margin-bottom: 10px
+
+.review__link
+	line-height: 1
+	color: $color-base
+	text-decoration: none
+	transition: color .2s ease-in-out
+	&:focus,
+	&:hover
+		color: $color-emphasis
+	&:active
+		color: rgba($color-emphasis, 0.7)
+
+.review__text
+	display: block
+	margin-top: 10px
+	+base
+	font-size: 14px
+	line-height: 1.5
+	color: inherit
+

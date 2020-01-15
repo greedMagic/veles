@@ -1,196 +1,41 @@
 .reviews
-	+row
+	position: relative
 
-.review
-	flex-basis: 50%
-	max-width: 50%
-	margin-bottom: 20px
-	padding-right: 15px
-	padding-left: 15px
-	+xs
-		flex-basis: 100%
-		max-width: 100%
-		margin-bottom: 10px
+.reviews__items
+	@media (min-width: 576px)
+		display: flex
+		flex: 0 1 auto
+		flex-direction: row
+		flex-wrap: wrap
+
+.reviews__item
+	flex-basis: 100%
+	max-width: 100%
+	width: 100%
+	padding: 10px 15px 15px
+	@media (min-width: 576px)
+		flex-basis: 50%
+		max-width: 50%
+	@media (min-width: 768px)
+		padding-bottom: 30px
 
 .reviews__pagination
 	flex-basis: 100%
 	max-width: 460px
-	margin: 0 auto 20px
+	margin: 20px auto 50px
 	padding-right: 15px
 	padding-left: 15px
-	@media (max-width: 992px)
-		margin-bottom: 50px
 
-.review__header
-	position: relative
-	overflow: hidden
-
-.review__counts
-	position: absolute
-	bottom: -100%
-	z-index: 15
-	display: flex
-	flex-direction: row
-	flex-wrap: nowrap
-	justify-content: flex-start
-	transition: bottom 0.20s ease
-
-.review__count
-	position: relative
-	display: flex
-	flex-direction: row
-	flex-wrap: nowrap
-	align-items: center
-	padding: 5px 10px
-	color: #ffffff
-	text-decoration: none
-	transition: color 0.15s ease
-	&::before
-		position: absolute
-		top: 0
-		right: 0
-		left: 0
-		bottom: 0
-		content: ""
-		box-shadow: 0 0 0 2px transparentize inset
-		transition: box-shadow .2s ease
-	&:focus::before
-		box-shadow: 0 0 0 2px $color-emphasis inset
-	&:focus,
-	&:hover
-		color: $color-emphasis
-
-.review__count-icon svg
-	height: 18px
-
-.review__count-text
-	display: block
-	margin-left: 10px
-	font-weight: 400
-	font-size: 18px
-	line-height: 1.5
-	font-family: sans-serif
-
-.review__control-text
-	display: block
-	margin-left: 15%
-	font-weight: 400
-	font-size: 18px
-	line-height: 1.5
-	font-family: sans-serif
-	color: inherit
-
-.review__bookmark
-	position: absolute
-	top: -100%
-	right: 5px
-	z-index: 15
-	display: flex
-	justify-content: center
-	align-items: center
-	width: 35px
-	height: 35px
-	color: #ffffff
-	transition: color 0.15s ease, top 0.20s ease
-	&::before
-		position: absolute
-		top: -5px
-		right: -5px
-		left: -5px
-		bottom: -5px
-		content: ""
-		box-shadow: 0 0 0 2px transparent inset
-		transition: box-shadow .2s ease
-	&:focus::before
-		box-shadow: 0 0 0 2px $color-emphasis inset
-	&:focus,
-	&:hover
-		color: $color-emphasis
-
-.review__bookmark-icon svg
-	height: 18px
-
-.review__image
-	position: relative
-	display: block
-	height: 205px
-	width: 100%
-	line-height: 1
-	overflow: hidden
-	background-color: rgba($color-base, 0.3)
-
-.review__image::before
-	position: absolute
-	top: 0
-	right: 0
-	left: 0
-	bottom: 0
-	z-index: 10
-	content: ""
-	background-color: transparent
-	box-shadow: 0 0 0 2px transparent inset
-	transition: background-color 0.25s ease, box-shadow 0.2s ease
-
-.review__image:focus::before
-	box-shadow: 0 0 0 2px $color-emphasis inset
-
-.review__image:focus::before,
-.review__image:hover::before,
-.review:focus-within .review__image::before,
-.review__header:hover .review__image::before
-	background-color: rgba(0,0,0,.25)
-
-.review__image img
-	display: block
-	height: 100%
-	width: 100%
-	object-fit: cover
-	transform: scale(1.05)
-	transition: transform .3s ease
-
-.review__image:focus img,
-.review__image:hover img
-	transform: scale(1.075)
-
-.review:focus-within .review__image img,
-.review__header:hover .review__image img
-	transform: scale(1.075)
-
-.review__header:hover .review__bookmark,
-.review:focus-within .review__bookmark
-	top: 5px
-
-.review__header:hover .review__counts,
-.review:focus-within .review__counts
-	bottom: 0
-
-.review__content
-	padding: 20px 0
-
-.review__title
+.reviews__title
 	display: block
 	margin-bottom: 10px
-	+title
-	font-size: 23px
-	line-height: 1.25
-	color: $color-base
-
-.review__link
-	line-height: 1
-	color: inherit
-	text-decoration: none
-	transition: color 0.15s ease
-	&:focus,
-	&:hover,
-	&:focus > *,
-	&:hover > *
-		color: $color-emphasis
-	&:active,
-	&:active > *
-		opacity: 0.75
-
-.review__text
+	padding: 0 15px
 	+base
-	font-size: 14px
+	font-weight: 600
+	font-size: 17px
 	line-height: 1.5
+	text-transform: uppercase
 	color: $color-base
+	letter-spacing: 2px
+	@media screen and ( max-width: 992px)
+		margin-top: 50px

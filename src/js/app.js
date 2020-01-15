@@ -1,79 +1,94 @@
 import 'slick-carousel';
-import MmenuLight from 'mmenu-light/dist/mmenu-light';
+import './main-menu';
+import AOS from 'aos';
 
-$('.slider__items').slick({
-  dots: false,
-  infinite: true,
-  speed: 500,
-  fade: true,
-  cssEase: 'linear',
-  prevArrow: $('.slider__control.slider__control--prev'),
-  nextArrow: $('.slider__control.slider__control--next'),
-  responsive: [
-    {
-      breakpoint: 575.98,
-      settings: {
-        arrows: false,
-        slidesToShow: 1,
-        dots: true,
-      }
-    },
-  ]
-})
+let $homeSlider;
+let $seeAlso;
 
-$('.small-slider__items').slick({
-  dots: false,
-  infinite: true,
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  prevArrow: $('.small-slider__control.small-slider__control--prev'),
-  nextArrow: $('.small-slider__control.small-slider__control--next'),
-  responsive: [
-    {
-      breakpoint: 575.98,
-      settings: {
-        arrows: false,
-        slidesToShow: 1,
-        dots: true,
-      }
-    },
-    {
-      breakpoint: 767.98,
-      settings: {
-        arrows: false,
-        slidesToShow: 2,
-        dots: false
-      }
-    },
-    {
-      breakpoint: 991.98,
-      settings: {
-        arrows: false,
-        slidesToShow: 2,
-        dots: false
-      }
-    },
-    {
-      breakpoint: 1199.98,
-      settings: {
-        arrows: false,
-        slidesToShow: 3,
-        dots: false
-      }
-    }
-  ]
-})
+AOS.init({
+  disable: 'phone', // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+  offset: 350,
+  delay: 250,
+  once: true
+});
 
-const $header = $('.header__main-menu');
-let scrollPrev = 0;
+$(document).ready(function (o) {
 
-$(window).scroll(function () {
-  const scrolled = $(window).scrollTop();
+  $homeSlider = o('.welcome__items');
+  $seeAlso = o('.see-also__slides');
 
-  if (scrolled > 0 && scrolled > scrollPrev) {
-    $header.addClass('header__main-menu--out');
-  } else {
-    $header.removeClass('header__main-menu--out');
-  }
-  scrollPrev = scrolled;
+  $homeSlider.on('init', function (event, slick) {
+    o('.welcome').removeClass('welcome--hide');
+  });
+
+  $homeSlider.slick({
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 7500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: true,
+    fade: true,
+    pauseOnHover: true,
+    swipe: true,
+    prevArrow: $('.welcome__control.welcome__control--prev'),
+    nextArrow: $('.welcome__control.welcome__control--next'),
+    mobileFirst: true,
+    responsive: [
+      {
+        breakpoint: 575.98,
+        settings: {
+          dots: false,
+          arrows: true,
+          swipe: false
+        }
+      }
+    ]
+  });
+
+  $seeAlso.on('init', function (event, slick) {
+    o('.see-also').removeClass('see-also--hide');
+  });
+
+
+  $seeAlso.slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 5500,
+    pauseOnHover: true,
+    mobileFirst: true,
+    prevArrow: $('.see-also__control.see-also__control--prev'),
+    nextArrow: $('.see-also__control.see-also__control--next'),
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 575.98,
+        settings: {
+          slidesToShow: 2,
+          dots: false,
+          arrows: true
+        }
+      },
+      {
+        breakpoint: 767.98,
+        settings: {
+          slidesToShow: 3,
+          dots: false,
+          arrows: true
+        }
+      },
+      {
+        breakpoint: 991.98,
+        settings: {
+          slidesToShow: 4,
+          dots: false,
+          arrows: true
+        }
+      }
+    ]
+  });
 });

@@ -1,0 +1,51 @@
+.sub-link
+	display: flex
+	align-items: center
+	text-decoration: none
+	color: $white
+	transition: color 0.25s ease
+	&:focus,
+	&:hover
+		color: $color-emphasis
+	&:active
+		color: rgba($color-emphasis, 0.7)
+
+.sub-link__icon-wrap
+	overflow: hidden
+	display: flex
+	height: 20px
+	width: 30px
+
+.sub-link__icon-wrap--shrink
+	width: 14px
+
+.sub-link__icon
+	display: flex
+	align-items: center
+	justify-content: center
+	width: auto
+	height: auto
+	color: inherit
+
+.sub-link__icon--bookmark
+	height: 18px
+
+.sub-link__icon--eye
+	margin-right: 5px
+	margin-bottom: 1px
+	height: 16px
+
+.sub-link__icon--review
+	margin-right: 5px
+	height: 16px
+
+
+.sub-link__text
+	font-weight: 400
+	font-size: 16px
+	line-height: 1.3
+	font-family: sans-serif
+	color: inherit
+
+.sub-link__text--hide
+	+visually-hidden

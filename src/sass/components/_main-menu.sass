@@ -1,0 +1,178 @@
+.main-menu__list
+	display: flex
+	flex-wrap: wrap
+	@media (max-width: 1199.98px)
+		overflow: scroll
+		overflow-x: hidden
+		overflow-y: auto
+		max-height: 100%
+		background-image: radial-gradient(farthest-side at 50% 0, rgba(0,0,0,0.2), rgba(0,0,0,0)), radial-gradient(farthest-side at 50% 100%, rgba(0,0,0,0.2), rgba(0,0,0,0))
+		background-position: 0 0, 0 100%
+		background-size: 100% 10px
+		background-repeat: no-repeat
+		&::before,
+		&::after
+			content: ""
+			position: relative
+			z-index: 1
+			display: block;
+			height: 15px
+			width: 100%
+		&::before
+			margin: 0 0 -10px
+			background: linear-gradient(to bottom,#FFF,#FFF 30%,rgba(255,255,255,0))
+		&::after
+			margin: -10px 0 0
+			background: linear-gradient(to bottom,rgba(255,255,255,0),#FFF 70%,#FFF)
+	@media (min-width: 1200px)
+		justify-content: space-between
+
+.main-menu__item
+	@media (max-width: 1199.98px)
+		flex-basis: 100%
+		max-width: 100%
+		margin: 10px 0
+
+.main-menu__link
+	display: inline-flex
+	padding: 18px 15px 20px
+	+base
+	font-size: 16px
+	line-height: 1.2
+	color: $color-base
+	text-decoration: none
+	text-transform: uppercase
+	transition: color .15s ease
+	@media (max-width: 1199.98px)
+		position: relative
+		display: flex
+		letter-spacing: 0.1rem
+		&::before
+			content: ""
+			position: absolute
+			z-index: -1
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			display: block
+			background-color: $gray-1
+	@media (min-width: 1200px)
+		padding: 10px 15px
+		font-size: 15px
+		letter-spacing: 2px
+
+.main-menu__text
+	+visually-hidden
+
+.main-menu__icon-box
+	position: relative
+	display: block
+	width: 22.5px
+	height: 10px
+	margin: 10px 3.75px
+
+.main-menu__icon-box--big
+	width: 40px
+	margin: 10px 0
+
+.main-menu__icon
+	top: 50%
+	margin-top: -1px
+	&,
+	&::before,
+	&::after
+		position: absolute
+		display: block
+		width: 100%
+		height: 2px
+		background-color: #333333
+		transition-property: transform
+		transition-duration: 0.075s;
+		transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19)
+	&::before,
+	&::after
+		content: ""
+	&::before
+		top: -5px
+		transition: top 0.075s 0.12s ease, opacity 0.075s ease
+	&::after
+		bottom: -5px
+		transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19)
+
+.main-menu__icon--color-white
+	&,
+	&::before,
+	&::after
+		background-color: $white
+
+.main-menu__icon--color-gray
+	&,
+	&::before,
+	&::after
+		background-color: $gray-2
+
+.main-menu.main-menu--active .main-menu__icon
+	transform: rotate(45deg)
+	transition-delay: 0.12s
+	transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
+	&::before
+		top: 0
+		opacity: 0
+		transition: top 0.075s ease, opacity 0.075s 0.12s ease
+	&::after
+		bottom: 0
+		transform: rotate(-90deg)
+		transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1)
+
+.main-menu__button
+	position: relative
+	display: none
+	padding: 10px
+	border: 0
+	overflow: visible
+	background-color: transparent
+	cursor: pointer
+	transition-property: opacity, filter
+	transition-duration: 0.15s
+	transition-timing-function: linear
+	@media (max-width: 1199.98px)
+		display: inline-flex
+
+.main-menu__button--color-orange
+	background-color: $orange
+
+.main-menu__side-panel
+	@media (max-width: 1199.98px)
+		position: fixed
+		z-index: 2
+		top: 0
+		left: -100%
+		bottom: 0
+		display: flex
+		flex-direction: column
+		overflow: hidden
+		width: 100%
+		background: #ffffff
+		visibility: hidden
+		transition: left .3s ease, visibility .3s ease 0.3s
+	@media (min-width: 576px) and (max-width: 1199.98px)
+		max-width: 420px
+		box-shadow: 0 0 15px 1px rgba(0,0,0,.4)
+
+.main-menu__side-panel-control
+	@media (max-width: 1199.98px)
+		padding: 5px 0
+		text-align: end
+
+.main-menu__side-panel-content
+	@media (max-width: 1199.98px)
+		flex-grow: 1
+		overflow: hidden
+		height: 100%
+
+.main-menu.main-menu--active .main-menu__side-panel
+	left: 0
+	visibility: visible
+	transition: left .3s ease
+

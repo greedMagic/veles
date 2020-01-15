@@ -1,31 +1,14 @@
 body
-	position: relative
-	display: flex
-	height: 100%
+	+base
 	font-size: 14px
 	line-height: 1.5
-	+base
-
 
 .wrapper
 	position: relative
 	width: 100%
-	display: flex
-	flex-direction: column
 	min-height: 100%
-	height: auto !important
+	height: auto
 	overflow-x: hidden
-
-
-.visually-hidden
-	position: absolute
-	width: 1px
-	height: 1px
-	padding: 0
-	border: 0
-	clip: rect(1px, 1px, 1px, 1px)
-	overflow: hidden
-
 
 .container
 	max-width: 1200px
@@ -33,161 +16,10 @@ body
 	padding-right: 15px
 	padding-left: 15px
 
-
 .logo
 	+title
 	line-height: 1.5
 	letter-spacing: 1px
-
-
-.button
-	display: inline-flex
-	justify-content: center
-	align-items: center
-	padding: 12px 15px
-	+base
-	font-weight: 600
-	font-size: 12px
-	line-height: 1.5
-	text-decoration: none
-	text-transform: uppercase
-	letter-spacing: 2px
-	color: #ffffff
-	background-color: rgba(0, 0, 0, 0.7)
-	border: 2px solid $color-emphasis
-	transition: all 0.15s ease
-	&:focus,
-	&:hover
-		background-color: $color-emphasis
-	&:active
-		background-color: rgba($color-emphasis, .9)
-
-.button--arrow
-	position: relative
-	&::after
-		display: block
-		margin-left: 5px
-		width: 30px
-		height: 25px
-		content: ""
-		background-image: url("../img/arrow.svg")
-		background-repeat: no-repeat
-		background-size: 24px 25px
-		background-position: left 0 center
-		transition: background-position 0.25s ease-in-out
-	&:focus::after,
-	&:hover::after
-		background-position: right 0 center
-
-.button--mono
-	background: rgba(0, 0, 0, 0.3)
-	border: 1px solid #ffffff
-	&:focus,
-	&:hover
-		color: $color-base
-		background-color: #ffffff
-	&:active
-		background-color: rgba(#ffffff, .9)
-
-
-.main-menu
-	position: relative
-
-.main-menu__control
-	position: relative
-	display: block
-	margin: 0
-	padding: 25px
-	background-color: transparent
-	border: 0
-	cursor: pointer
-	transition-property: opacity, filter
-	transition-duration: 0.15s
-	transition-timing-function: linear
-	&:focus,
-	&:hover
-		opacity: 0.7
-
-.main-menu__control--open
-	background-color: $color-emphasis
-	@media (min-width: 1199.98px)
-		display: none
-
-.main-menu__control--close
-	position: absolute
-	right: 0
-	margin: 0
-	background-image: url('../img/menu-close.svg')
-	background-size: 30px
-	background-position: center
-	background-repeat: no-repeat
-	@media (min-width: 576px)
-		display: none
-
-.main-menu__control-icon
-	display: block
-	top: 50%;
-	left: 50%
-	margin-top: -1px
-	transform: translateX(-50%)
-	&,
-	&::before,
-	&::after
-		position: absolute
-		width: 22.5px
-		height: 2px
-		background-color: #ffffff
-	&::before,
-	&::after
-		display: block
-		content: ""
-	&::before
-		top: -6.5px
-	&::after
-		bottom: -6.5px
-
-.main-menu__list
-	+row
-	list-style: none
-	justify-content: space-between
-
-.main-menu__link
-	display: block
-	padding: 10px 15px
-	+base
-	font-size: 15px
-	line-height: 1.2
-	letter-spacing: 2px
-	color: $color-base
-	text-decoration: none
-	text-transform: uppercase
-	transition: color .15s ease
-	&:focus,
-	&:hover
-		color: rgba($color-base, 0.55)
-	&:active,
-	&.is-current,
-	&.is-current:focus,
-	&.is-current:hover,
-	&.is-current:active
-		color: rgba($color-base, 0.15)
-		cursor: default
-
-li.main-menu__item
-	@media (max-width: 1199.98px)
-		position: relative
-		margin-bottom: 20px
-
-a.main-menu__link
-	@media (max-width: 1199.98px)
-		padding: 20px 15px
-		text-decoration: none
-		background-color: rgba($color-base, 0.05)
-
-a.main-menu__link.is-current
-	@media (max-width: 1199.98px)
-		background-color: rgba($color-base, 0.025)
-
 
 .header
 	position: relative
@@ -210,16 +42,15 @@ a.main-menu__link.is-current
 		padding-top: 30px
 
 .header__main-menu
-	padding-top: 15px
-	padding-bottom: 35px
-	+xs
-		padding: 0
+	padding: 0
 	@media (max-width: 1199.98px)
 		position: fixed
 		top: 0
 		left: 0
 		width: 100%;
 		transition: all .3s ease
+	@media (min-width: 1200px)
+		padding: 15px 0 35px
 
 .header__main-menu--out
 	@media (max-width: 1199.98px)
@@ -229,78 +60,6 @@ a.main-menu__link.is-current
 	font-size: 35px
 	line-height: 1
 	text-align: center
-
-
-.content
-	position: relative
-
-.content__wrap
-	+row
-	padding-top: 95px
-	@media screen and ( max-width: 992px)
-		padding-top: 0
-
-.content__main
-	flex-basis: 66.66666667%
-	max-width: 66.66666667%
-	+row
-	margin: 0
-	padding-right: 15px
-	padding-left: 15px
-	+xs
-		flex-basis: 100%
-		max-width: 100%
-	@media screen and ( max-width: 992px)
-		flex-basis: 100%
-		max-width: 100%
-
-.content__main > *
-	flex-basis: 100%
-	max-width: 100%
-	@media screen and ( max-width: 992px)
-		order: 1
-
-.content__aside
-	flex-basis: 33.33333333%
-	max-width: 33.33333333%
-	+row
-	margin: 0
-	padding-right: 15px
-	padding-left: 15px
-	+xs
-		flex-basis: 100%
-		max-width: 100%
-	@media screen and ( max-width: 992px)
-		order: 3
-		flex-basis: 100%
-		max-width: 100%
-
-
-.content__random-article
-	flex-basis: 100%
-	max-width: 100%
-	margin-top: auto
-	margin-bottom: 30px
-	@media screen and ( max-width:  420px)
-		flex-basis: unset
-		max-width: unset
-		margin-right: -15px
-		margin-left: -15px
-		padding: 0
-
-.content__small-slider
-	flex-basis: 100%
-	max-width: 100%
-	margin-top: 50px
-	margin-bottom: 90px
-	@media screen and ( max-width: 992px)
-		margin-top: 20px
-		margin-bottom: 75px
-		order: 2
-	@media (min-width: 768px) and (max-width: 991.98px)
-		margin-top: 25px
-		margin-bottom: 25px
-
 
 .footer
 	background-color: #f7f7f7
